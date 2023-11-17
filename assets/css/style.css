@@ -30,6 +30,9 @@ header {
     z-index: 99;
     width: 100%;
     box-shadow: 0 2px 2px #3a3a3a;
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
     
 }
 
@@ -58,6 +61,32 @@ h1 {
     border-bottom: 1px solid blue;
 }
 
+/* Navbar styles with dropdown toggle */
+nav {
+    position: absolute;
+    background-color: green;
+    width: 100%;
+    left: 0;
+    padding: 0 1rem;
+    box-shadow: 0 2px 2px #3a3a3a;
+    display: none;
+    top: 100%;
+
+}
+
+/* Nav toggle */
+#nav-toggle:checked~nav {
+    display: block;
+}
+
+#nav-toggle {
+    display: none;
+}
+
+.nav-toggle-label {
+    font-size: 2rem;
+}
+
 
 
 
@@ -70,6 +99,7 @@ main {
     background-color: orange;
     /* Makes Main element longer to push down footer */
     flex: 1 0 auto;
+    margin-top: 47px;
 
 }
 
