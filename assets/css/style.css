@@ -21,7 +21,7 @@ body {
 
 /* Header */
 header {
-    background-color: green;
+    background-color: white;
     font-family: 'Oswald', sans-serif;
     text-transform: uppercase;
     letter-spacing: 2px;
@@ -64,7 +64,7 @@ h1 {
 /* Navbar styles with dropdown toggle */
 nav {
     position: absolute;
-    background-color: green;
+    background-color: white;
     width: 100%;
     left: 0;
     padding: 0 1rem;
@@ -87,25 +87,27 @@ nav {
 }
 
 
-
-
-
-
-
-
 /* Main */
 main {
-    background-color: orange;
+    
     /* Makes Main element longer to push down footer */
     flex: 1 0 auto;
     margin-top: 47px;
 
 }
 
+#hero {
+    height: 600px;
+    width: 100%;
+    background: url("../images/1st.jpg") no-repeat center center/cover;
+    
+
+}
 
 
 
-/* Footer */
+
+
 /* Footer */
 #social-networks {
     text-align: center;
