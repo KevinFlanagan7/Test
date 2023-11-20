@@ -21,7 +21,7 @@ body {
 
 /* Header */
 header {
-    background-color: white;
+    background-color: rgb(255, 255, 255);
     font-family: 'Oswald', sans-serif;
     text-transform: uppercase;
     letter-spacing: 2px;
@@ -31,6 +31,7 @@ header {
     width: 100%;
     box-shadow: 0 2px 2px #3a3a3a;
     display: flex;
+    flex-direction: row-reverse;
     justify-content: space-between;
     align-items: baseline;
 
@@ -41,7 +42,7 @@ header a {
 
 }
 
-h1 {
+h1, h2, h3 {
     font-family: 'Oswald', sans-serif;
     text-transform: uppercase;
     letter-spacing: 2px;
@@ -74,10 +75,10 @@ nav {
 }
 
 /* Nav toggle */
+
 #nav-toggle:checked~nav {
     display: block;
 }
-
 #nav-toggle {
     display: none;
 }
@@ -100,8 +101,26 @@ main {
     height: 600px;
     width: 100%;
     background: url("../images/1st.jpg") no-repeat center center/cover;
+    position: relative;
     
 
+}
+
+#cover-text {
+    /* Final rgba value sets the opacity so it is semi-transparent */
+    background-color: rgba(107, 192, 241, 0.7);
+    font-size: 130%;
+    position: absolute;
+    bottom: 30px;
+    width: 80%;
+    min-height: 200px;
+    padding-top: 20px;
+    padding-left: 10px;
+}
+
+#cover-text>h2,
+#cover-text>h3 {
+    color: #ffffff;
 }
 
 
