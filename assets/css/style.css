@@ -154,12 +154,53 @@ main {
     line-height: 0;
 }
 
+/* Style to Sign-up page */
+
+main {
+    /* Enlarge main element to push footer down*/
+    flex: 1 0 auto;
+    /* Add margin at the top to prevent content from being covered by the header */
+    margin-top: 47px;
+    /* Enable flex properties for child elements */
+    display: flex;
+    flex-direction: column;
+    color: white;
+}
+
+#signup {
+    background-image: url("../images/green.jpg");
+    background-size: cover;
+    background-position: 75%;
+    padding: 20px 10% 0 10%;
+    flex-grow: 1;
+}
+
+form {
+    padding: 20px;
+}
+
+.radio-buttons {
+    width: 100%;
+    
+}
+
+.reg-button {
+    margin-top: 20px;
+    border-radius: 2px;
+    padding: 15px 32px;
+    font-size: 100%;
+    background-color: rgb(107, 192, 241);
+    color: #fafafa;
+}
+
+
+
 
 
 
 /* Footer */
 #social-networks {
-    background-color: rgba(107, 192, 241, 0.7); ;
+    background-color: rgba(107, 192, 241, 0.7);
     text-align: center;
     padding: 20px 0;
     display: flex;
