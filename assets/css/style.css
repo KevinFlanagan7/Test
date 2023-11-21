@@ -277,6 +277,12 @@ form {
     #photos {
             column-count: 3;
     }
+
+    /* Hero */
+    #cover-text {
+        width: 300px;
+        right: 0px;
+    }
 }
         /* Large devices (laptops and desktops, 992px and up) */
         @media screen and (min-width: 992px) 
