@@ -129,6 +129,20 @@ main {
     color: #230d72;
 }
 
+/* Prize Section */
+#prize {
+    width: 90%;
+    margin: 20px;
+    color: #230d72;
+
+}
+
+#prize h2 {
+    margin-bottom: 20px;
+    text-align: center;
+    font-size: 280%;
+}
+
 
 
 
