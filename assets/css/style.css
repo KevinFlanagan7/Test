@@ -143,6 +143,16 @@ main {
     font-size: 280%;
 }
 
+#photos img {
+    width: 100%;
+    line-height: 1em;
+    
+
+}
+
+#photos {
+    line-height: 0;
+}
 
 
 
@@ -164,9 +174,18 @@ main {
     
 }
 
+/* Media query for Gallery: large or landscape phones (576px and up) Masonary view */
+@media screen and (min-width: 576px) {
+    #photos {
+        column-count: 2;
+        column-gap: 0;
+    }
+}
+
 /* Media query: tablets and larger (768px and up) */
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 768px) 
+{
 
     /* Header */
     nav {
@@ -202,8 +221,17 @@ main {
 
     }
 
+    /* Gallery */
+    #photos {
+            column-count: 3;
+    }
+}
         /* Large devices (laptops and desktops, 992px and up) */
-        @media screen and (min-width: 992px) {
+        @media screen and (min-width: 992px) 
+{
             #menu a:hover {
                 border-bottom: 1px solid #3a3a3a;
             }
+        
+        
+}
