@@ -16,14 +16,14 @@ body {
     /* Generic project styles */
     color: #3a3a3a;
     font-family: 'Meriendo', cursive;
-    font-size: 100%;
+    font-size: 85%;
 }
 
 
 /* Header */
 header {
     background-color: rgba(107, 192, 241, 0.7);
-    font-size: 85%;
+    
     text-transform: uppercase;
     letter-spacing: 2px;
     padding: 0 16px 6px 16px;
