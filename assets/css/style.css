@@ -145,6 +145,14 @@ main {
     font-size: 280%;
 }
 
+#portugal img {
+    width: 100%;
+    
+}
+
+
+/* Gallery Styles */
+
 #photos img {
     width: 100%;
     line-height: 1em;
@@ -316,5 +324,13 @@ form {
                 border-bottom: 1px solid #3a3a3a;
             }
         
+        /* Prize section */
+
+
+    
+        #portugal img {
+    width: 25%;
+
+    
         
 }
