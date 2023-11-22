@@ -1,5 +1,5 @@
 /* Google fonts import */
-@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300&family=Oswald:wght@200;300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300&family=Merienda&family=Oswald:wght@200;300;400;500;600;700&display=swap');
 
 /* Asterisk wildcard selector to override default styles added by the browser */
 * {
@@ -15,17 +15,18 @@ body {
     flex-direction: column;
     /* Generic project styles */
     color: #3a3a3a;
-    font-family: 'Lato', sans-serif;
+    font-family: 'Meriendo', cursive;
+    font-size: 100%;
 }
 
 
 /* Header */
 header {
     background-color: rgba(107, 192, 241, 0.7);
-    font-family: 'Oswald', sans-serif;
+    font-size: 85%;
     text-transform: uppercase;
     letter-spacing: 2px;
-    padding: 0 1rem;
+    padding: 0 16px 6px 16px;
     position: fixed;
     z-index: 99;
     width: 100%;
@@ -48,13 +49,13 @@ header a {
 }
 
 h1, h2, h3 {
-    font-family: 'Oswald', sans-serif;
+    
     text-transform: uppercase;
     letter-spacing: 2px;
 }
 
 #menu {
-    font-size: 110%;
+    
     letter-spacing: 4px;
     list-style-type: none;
 }
@@ -89,7 +90,7 @@ nav {
 }
 
 .nav-toggle-label {
-    font-size: 2rem;
+    font-size: 1.5rem;
 }
 
 
