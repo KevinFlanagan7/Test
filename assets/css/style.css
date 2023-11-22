@@ -52,6 +52,7 @@ h1, h2, h3 {
     
     text-transform: uppercase;
     letter-spacing: 2px;
+    
 }
 
 #menu {
@@ -205,7 +206,18 @@ form {
     color: #fafafa;
 }
 
+/* map */
+#map-wrapper {
 
+    height: 300px;
+    
+}
+
+#map {
+    height: 100%;
+    width: 100%;
+   
+}
 
 
 
@@ -270,7 +282,7 @@ form {
     /* Main content */
     main {
         /* Push main content down to accommodate larger header */
-        margin-top: 79px;
+        margin-top: 83px;
 
     }
 
