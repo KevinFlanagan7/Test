@@ -13,7 +13,8 @@ html {
 }
 
 :root {
-    --primary-color: #6e9075ff;;
+    --primary-color: #6e9075ff;
+    --secondary-color: #2b1679ff;
 }
 
 /* General styles */
@@ -47,10 +48,11 @@ header {
 }
 
 #logo {
-    color: #230d72;
+    color: var(--secondary-color);
 }
 
 header a {
+    color: var(--secondary-color);
     text-decoration: none;
 
 }
@@ -64,7 +66,7 @@ h1, h2, h3 {
 
 #menu {
     
-    letter-spacing: 1rem;
+    letter-spacing: 1px;
     list-style-type: none;
 }
 
@@ -102,7 +104,7 @@ nav {
 }
 
 
-/* Main */
+
 main {
     
     /* Makes Main element longer to push down footer */
@@ -121,35 +123,36 @@ main {
 }
 
 #cover-text {
-    /* Final rgba value sets the opacity so it is semi-transparent */
+
     background-color: var(--primary-color);
-    font-size: 130%;
+    font-size: 1.5rem;
     position: absolute;
-    bottom: 0px;
-    right: 0px;
+    bottom: 0;
+    right: 0;
     width: 70%;
-    padding-top: 10px;
-    padding-left: 10px;
-    padding-bottom: 10px;
+    padding-top: 1rem;
+    padding-left: 1rem;
+    padding-bottom: 1rem;
 }
 
 #cover-text>h2,
 #cover-text>h3 {
-    color: #230d72;
+    color: var(--secondary-color);
+    letter-spacing: 1px;
 }
 
 /* Prize Section */
 #prize {
     width: 90%;
     margin: 20px;
-    color: #230d72;
+    color: var(--secondary-color);
 
 }
 
 #prize h2 {
     margin-bottom: 20px;
     text-align: center;
-    font-size: 280%;
+    font-size: 4rem;
 }
 
 #portugal img {
@@ -250,7 +253,7 @@ form {
 #social-networks i {
     font-size: 160%;
     padding: 5%;
-    color: #230d72;
+    color: var(--secondary-color);
     
 }
 
