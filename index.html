@@ -37,7 +37,7 @@
   <body>
     <!-- Header -->
     <header>
-      <a href="index.html">
+      <a href="#hero">
         <h1 id="logo">Golf Classic</h1>
       </a>
 
@@ -48,9 +48,9 @@
 
       <nav>
         <ul id="menu">
-            <li><a href="index.html" aria-label="Go to the home section">Home</a></li>
+            <li><a href="#hero" aria-label="Go to the home section">Home</a></li>
             <li><a href="#gallery" aria-label="Go to the gallery section">Gallery</a></li>
-            <li><a href="#signup" aria-label="Go to the play golf section">Play Golf</a></li>
+            <li><a href="#register" aria-label="Go to the play golf section">Play Golf</a></li>
           
         </ul>
       </nav>
@@ -59,7 +59,7 @@
     <!-- Main content, Hero Section -->
     <main>
       <section id="hero">
-        <div id="cover-text">
+        <div class="cover-text">
           <h2>Midland Golf Classic</h2>
           <h3>Ballinalsoe Golf Club June 7th-9th</h3>
 
@@ -116,7 +116,7 @@
     <!--Gallery Section-->
 
     <section id="gallery">
-        <div id="photos">
+        <div class="photos">
             <img src="assets/images/13th.jpg" alt="Picture of golf course">
             <img src="assets/images/17th.jpg" alt="Picture of golf course">
             <img src="assets/images/1st.jpg" alt="Picture of golf course">
@@ -132,10 +132,11 @@
 
     <!--Registration Section-->
 
-    <section id="signup">
+    <section id="register">
     
-        <form action="https://formdump.codeinstitute.net" id="signup-form" method="POST">
-            <h2>Registration <i class="fa-solid fa-address-card"></i></h2>
+        <form action="https://formdump.codeinstitute.net" id="register-form" method="POST">
+
+            <h2>Let's Play Golf <i class="fa-solid fa-address-card"></i></h2>
     
             <label for="first_name">First Name</label>
             <input type="text" name="first_name" id="first_name" class="text-input" required>
