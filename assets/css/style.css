@@ -10,6 +10,8 @@
 
 html {
     font-size: 62.5%;
+    scroll-behavior: smooth;
+    scroll-padding-top: 4rem;
 }
 
 :root {
@@ -190,9 +192,8 @@ nav {
     flex-grow: 1;
 }
 
-#register {
-    margin-top: 0rem;
-}
+
+
 
 #register-form {
     padding: 2rem;
@@ -270,7 +271,14 @@ nav {
 @media screen and (min-width: 768px) 
 {
 
-    /* Header */
+    html {
+        scroll-behavior: smooth;
+        scroll-padding-top: 8rem;
+}
+
+
+
+
     nav {
         display: block;
         position: relative;
@@ -316,6 +324,9 @@ nav {
         /* Large devices (laptops and desktops, 992px and up) */
         @media screen and (min-width: 992px) 
 {
+       
+
+
             #menu a:hover {
                 border-bottom: 1px solid #3a3a3a;
             }
@@ -326,7 +337,7 @@ nav {
     
         #portugal img {
     width: 25%;
-
+}
     
         
 }
