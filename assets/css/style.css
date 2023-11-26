@@ -170,6 +170,8 @@ nav {
 }
 
 
+
+
 /* Gallery Styles */
 
 .photos img {
@@ -318,6 +320,15 @@ nav {
     .cover-text {
         width: 300px;
         right: 0px;
+    }
+
+    #portugal img {
+        width: 25%;
+    }
+
+    #first-prize {
+        /*display: flex;*/
+        flex-direction: row;
     }
 
 
