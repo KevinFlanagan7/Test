@@ -143,7 +143,7 @@ nav {
 
 /* Prize Section */
 #prizes {
-    background-color: var(--dark-green);
+    background-color: var(--white);
     width: 100%;
     color: var(--dark-navy);
 
@@ -166,6 +166,11 @@ nav {
 .portugal img {
     width: 100%;
     
+}
+
+.ashford-castle img {
+    width: 100%;
+
 }
 
 
@@ -317,14 +322,32 @@ nav {
 
     /* Prizes section */
 
-    #first-prize {
+    #first-prize, #second-prize {
         display: flex;
+        
     }
 
-    .holiday, .portugal {
-        
+    .holiday, .portugal, .hotel-break,
+    .ashford-castle {
         flex-direction: row;
         width: 50%;
+        
+    }
+
+    #second-prize {
+        flex-direction: row-reverse;
+
+    }
+    
+
+    .holiday, .hotel-break {
+        text-align: center;
+        align-self: center;
+    }
+
+    p {
+        padding-right: 5rem;
+        padding-left: 5rem;
     }
 
     
