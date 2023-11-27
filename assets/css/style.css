@@ -142,10 +142,9 @@ nav {
 }
 
 /* Prize Section */
-#prize {
+#prizes {
     background-color: var(--dark-green);
     width: 100%;
-    /*margin: 2rem;*/
     color: var(--dark-navy);
 
 }
@@ -158,13 +157,13 @@ nav {
 
 }
 
-#prize h2 {
+#prizes h2 {
     margin-bottom: 2rem;
     text-align: center;
     font-size: 4rem;
 }
 
-#portugal img {
+.portugal img {
     width: 100%;
     
 }
@@ -194,9 +193,6 @@ nav {
     padding: 2rem 1rem 0 1rem;
     flex-grow: 1;
 }
-
-
-
 
 #register-form {
     padding: 2rem;
@@ -231,7 +227,7 @@ nav {
     color: var(--white);
 }
 
-/* map */
+/* Map section */
 #map-wrapper {
 
     height: 300px;
@@ -279,9 +275,6 @@ nav {
         scroll-padding-top: 8rem;
 }
 
-
-
-
     nav {
         display: block;
         position: relative;
@@ -322,14 +315,19 @@ nav {
         right: 0px;
     }
 
-    #portugal img {
-        width: 25%;
-    }
+    /* Prizes section */
 
     #first-prize {
-        /*display: flex;*/
-        flex-direction: row;
+        display: flex;
     }
+
+    .holiday, .portugal {
+        
+        flex-direction: row;
+        width: 50%;
+    }
+
+    
 
 
 }
@@ -347,7 +345,7 @@ nav {
 
 
     
-        #portugal img {
+        .portugal img {
     width: 25%;
 }
     
