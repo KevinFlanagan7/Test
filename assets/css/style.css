@@ -234,7 +234,22 @@ nav {
 #calendar {
     font-size: 1.5rem;
     color: var(--dark-navy: #2b1679ff);
+    margin-top: 2rem;
+    
         
+}
+
+label {
+    padding-right: 1rem;
+}
+
+.date-input {
+    background-color: var(--white);
+    color: var(--dark-navy)
+    font-family: 'Merienda';
+    font-size: 1.5rem;
+    padding: 2px;
+
 }
 
 .reg-button {
