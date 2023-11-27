@@ -165,12 +165,19 @@ nav {
 
 .portugal img {
     width: 100%;
+    border-radius: 40%;
     
 }
 
 .ashford-castle img {
     width: 100%;
+    border-radius: 40%;
 
+}
+
+.k-club img {
+    width: 100%;
+    border-radius: 40%;
 }
 
 
@@ -322,13 +329,13 @@ nav {
 
     /* Prizes section */
 
-    #first-prize, #second-prize {
+    #first-prize, #second-prize, #third-prize {
         display: flex;
         
     }
 
     .holiday, .portugal, .hotel-break,
-    .ashford-castle {
+    .ashford-castle, .golf-voucher, .k-club {
         flex-direction: row;
         width: 50%;
         
@@ -340,7 +347,7 @@ nav {
     }
     
 
-    .holiday, .hotel-break {
+    .holiday, .hotel-break, .golf-voucher {
         text-align: center;
         align-self: center;
     }
@@ -368,8 +375,8 @@ nav {
 
 
     
-        .portugal img {
-    width: 25%;
+        .portugal img, .ashford-castle img, .k-club img {
+        width: 80%;
 }
     
         
