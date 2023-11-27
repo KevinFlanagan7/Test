@@ -313,9 +313,6 @@ nav {
         margin: 0 0.5rem;
     }
 
-    
-    
-
     /* Gallery */
     .photos {
             column-count: 3;
@@ -326,6 +323,8 @@ nav {
         width: 300px;
         right: 0px;
     }
+
+
 
     /* Prizes section */
 
@@ -357,6 +356,12 @@ nav {
         padding-left: 5rem;
     }
 
+    /* Registration section */
+
+    #register {
+        padding: 2rem 15rem 2rem 15rem;
+    }
+
     
 
 
@@ -377,7 +382,12 @@ nav {
     
         .portugal img, .ashford-castle img, .k-club img {
         width: 80%;
-}
+        }
+
+        #register {
+            
+            padding: 2rem 30rem 2rem 30rem;
+        }
     
         
 }
