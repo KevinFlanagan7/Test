@@ -50,28 +50,27 @@ This site gives some information about the golf classic, It also gives the abili
 * Quality and valuable content.
 * Easily found contact details.
 * Form to directly contact the club.
+* Mao to location of club.
 
 ## User Stories
 
-* As a user, I want to know that the club is well established.
-* As a user, I want the website to give me information about what is involved in trathalon.
 * As a user, I want to be able to easily contact the club.
 * As a user, I want to be able to make contact with the club via several different methods, i.e. social media.
 * As a user, I want to be able to easily navigate through the website.
 * As a user, I want to know where the club is based.
-* As a user, I want to know what events are taking place.
+* As a user, I want to know what event is taking place.
 
 ## Site owners Goals
 
-* Promote the club.
-* Increase the number of members.
+* Promote the golf classic competition.
+* Increase the number of competitors.
 * Increase rankings on search engines.
 
 ### Requirements
 
 * Easy to navigate on various screen sizes.
 * Clear information on the services provided.
-* Keep the user interested with small bits of information to make them want to engage with the club.
+* Keep the user interested with the prizes to be won in the competetion.
 * Simple methods of contacting the club.
 * Visually inviting so users do not leave.
 
@@ -81,4 +80,4 @@ This site gives some information about the golf classic, It also gives the abili
 * I expect all links to social media sites to be opened in a new tab.
 * I expect all navigation links to work correctly.
 * I expect screen size not to affect the quality of the website.
-* I expect all information to be correct and accurate.
+
