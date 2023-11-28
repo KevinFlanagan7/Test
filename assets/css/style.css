@@ -232,8 +232,6 @@ nav {
     font-size: 1.5rem;
     color: var(--dark-navy: #2b1679ff);
     margin-top: 2rem;
-    
-        
 }
 
 #calendar label {
@@ -245,7 +243,6 @@ nav {
     color: var(--dark-navy);
     font-size: 1.5rem;
     padding: 2px;
-
 }
 
 .reg-button {

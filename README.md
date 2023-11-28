@@ -1,39 +1,84 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+# Midland Golf Classic
 
-Welcome,
+# Goal for this Project
 
-This is the Code Institute student template for Codeanywhere. If you are using Gitpod then you need [this template](https://github.com/Code-Institute-Org/gitpod-full-template) instead.  We have preinstalled all of the tools you need to get started. It's perfectly ok to use this template as the basis for your project submissions.
+Welcome to .
 
-You can safely delete this README.md file, or change it for your own project. Please do read it at least once, though! It contains some important information about Codeanywhere and the extensions we use. Some of this information has been updated since the video content was created. The last update to this file was: **August 30th, 2023**
+This site gives some information about the golf classic, It also gives the ability to make contact with the club easily through social media or directly via the registration form.
 
-## Codeanywhere Reminders
 
-To run a frontend (HTML, CSS, Javascript only) application in Codeanywhere, in the terminal, type:
+![Responsive Displays]()
 
-`python3 -m http.server`
+# Table of Contents
 
-A button should appear to click: _Open Preview_ or _Open Browser_.
+* [UX](#ux "UX")
+  * [User Goals](#user-goals "User Goals")
+  * [User Stories](#user-stories "User Stories")
+  * [Site Owners Goals](#site-owners-goals)
+  * [User Requirements and Expectations](#user-requirements-and-expectations)
+    * [Requirements](#requirements)
+    * [Expectations](#expectations)
+  * [Design Choices](#design-choices)
+    * [Fonts](#fonts)
+    * [Icons](#icons)
+    * [Colours](#colours)
+    * [Structure](#structure)
+  * [Wireframes](#wireframes)
+  * [Features](#features)
+    * [Existing Features](#existing-features)
+      * [Navigation Bar](#navigation-bar)
+      * [Landing Page](#landing-page)
+      * [About Section](#about-section)
+      * [Events Section](#events-section)
+      * [Contact Section](#contact-section)
+      * [Footer](#footer)
+    * [Features to be implemented](#features-to-be-implemented)
+  * [Technologies used](#technologies-used)
+    * [Languages](#languages)
+    * [Tools and Libraries](#tools-and-libraries)
+  * [Testing](#testing)
+    * [Unfixed Bugs](#unfixed-bugs)
+  * [Deployment](#deployment)
+  * [Credits](#credits)
 
-To run a frontend (HTML, CSS, Javascript only) application in Codeanywhere with no-cache, you can use this alias for `python3 -m http.server`.
+# UX
 
-`http_server`
+## User Goals
 
-To run a backend Python file, type `python3 app.py`, if your Python file is named `app.py` of course.
+* Visually appealing, including images.
+* Easily navigated around.
+* Quality and valuable content.
+* Easily found contact details.
+* Form to directly contact the club.
 
-A button should appear to click: _Open Preview_ or _Open Browser_.
+## User Stories
 
-In Codeanywhere you have superuser security privileges by default. Therefore you do not need to use the `sudo` (superuser do) command in the bash terminal in any of the lessons.
+* As a user, I want to know that the club is well established.
+* As a user, I want the website to give me information about what is involved in trathalon.
+* As a user, I want to be able to easily contact the club.
+* As a user, I want to be able to make contact with the club via several different methods, i.e. social media.
+* As a user, I want to be able to easily navigate through the website.
+* As a user, I want to know where the club is based.
+* As a user, I want to know what events are taking place.
 
-To log into the Heroku toolbelt CLI:
+## Site owners Goals
 
-1. Log in to your Heroku account and go to _Account Settings_ in the menu under your avatar.
-2. Scroll down to the _API Key_ and click _Reveal_
-3. Copy the key
-4. In Codeanywhere, from the terminal, run `heroku_config`
-5. Paste in your API key when asked
+* Promote the club.
+* Increase the number of members.
+* Increase rankings on search engines.
 
-You can now use the `heroku` CLI program - try running `heroku apps` to confirm it works. This API key is unique and private to you so do not share it. If you accidentally make it public then you can create a new one with _Regenerate API Key_.
+### Requirements
 
----
+* Easy to navigate on various screen sizes.
+* Clear information on the services provided.
+* Keep the user interested with small bits of information to make them want to engage with the club.
+* Simple methods of contacting the club.
+* Visually inviting so users do not leave.
 
-Happy coding!
+### Expectations
+
+* I expect to know if a form has been submitted properly and if items are not filled in, to be prompted.
+* I expect all links to social media sites to be opened in a new tab.
+* I expect all navigation links to work correctly.
+* I expect screen size not to affect the quality of the website.
+* I expect all information to be correct and accurate.
