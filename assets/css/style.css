@@ -207,8 +207,8 @@ nav {
     flex-grow: 1;
 }
 
-#register-form {
-    padding: 2rem;
+#register {
+    padding: 2rem 5rem;
 }
 
 #register-form h2 {
@@ -226,10 +226,7 @@ nav {
     padding: 0 1rem;
 }
 
-/*.radio-buttons {
-    width: 100%;
-    
-}*/
+
 
 #calendar {
     font-size: 1.5rem;
@@ -239,14 +236,13 @@ nav {
         
 }
 
-label {
+#calendar label {
     padding-right: 1rem;
 }
 
 .date-input {
     background-color: var(--white);
-    color: var(--dark-navy)
-    font-family: 'Merienda';
+    color: var(--dark-navy);
     font-size: 1.5rem;
     padding: 2px;
 
@@ -262,11 +258,7 @@ label {
 }
 
 /* Map section */
-#map-wrapper {
 
-    height: 300px;
-    
-}
 
 #map {
     height: 100%;
@@ -385,7 +377,7 @@ label {
     /* Registration section */
 
     #register {
-        padding: 2rem 15rem 2rem 15rem;
+        padding: 2rem 15rem;
     }
 
     
@@ -410,6 +402,16 @@ label {
         width: 80%;
         }
 
-        
-        
+       #large-screen {
+        display: flex;
+       }
+
+       #register, #map-wrapper {
+        width: 50%;
+       }
+
+       #register {
+        padding: 2rem 10rem;
+       }
+
 }
