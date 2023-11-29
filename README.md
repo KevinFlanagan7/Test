@@ -146,7 +146,7 @@ The navigation bar is fully responsive to allow for various screen sizes. It inc
 
     -   In order for the user to visably see which of the links they are hovering over there is a bar below the text.
 
-        ![Navigation bar on hover](wireframes/Header_large_hover.png)
+    ![Navigation bar on hover](wireframes/Header_large_hover.png)
     \
     &nbsp;
     
@@ -170,7 +170,7 @@ The navigation bar is fully responsive to allow for various screen sizes. It inc
 
     - When pressed, it opens up the main menu with all the links available.
 
-        ![Nav bar on small devices expanded](wireframes/Header_mobile_menu.png)
+    ![Nav bar on small devices expanded](wireframes/Header_mobile_menu.png)
 
         
 \
