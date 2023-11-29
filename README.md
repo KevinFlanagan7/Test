@@ -87,7 +87,9 @@ I will used some icons for my website from the [Font Awesome library](https://fo
 
 ### Colours
 
-I have used [Colourmind](https://colormind.io/ "colourmind") to help in the selection of my colour scheme. 
+I have used [Coolers](https://coolors.co/> "Coolors") to help in the selection of my colour scheme.
+
+![Colour Pallet](wireframes/Project_colors.png)
 
 ### Structure
 
