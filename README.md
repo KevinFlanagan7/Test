@@ -168,9 +168,9 @@ The navigation bar is fully responsive to allow for various screen sizes. It inc
 
     - When pressed, it opens up the main menu with all the links available.
 
-     ![Nav bar on small devices expanded](wireframes/Header_mobile_menu.png)
-     \
-     &nbsp;
+      ![Nav bar on small devices expanded](wireframes/Header_mobile_menu.png)
+      \
+      &nbsp;
 
         
 
