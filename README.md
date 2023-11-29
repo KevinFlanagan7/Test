@@ -154,29 +154,23 @@ The navigation bar is fully responsive to allow for various screen sizes. It inc
 + iPad devices (<992px)
 \
 &nbsp;
-    - Like the desktop this also spans the full width of the device and with all navigational links (Home, Gallery, Play Golf (Registration page).
-
+    ![Nav bar on iPad devices](wireframes/Header_large.png)
+    - Like the desktop this also spans the full width of the device and with all navigational links (Home, Gallery, Play Golf (Registration page)
     \
     &nbsp;
-![Nav bar on iPad devices](wireframes/Header_large.png)
 
 
-
-    + Phone devices (<768px)
++ Phone devices (<768px)
 \
 &nbsp;
+    ![Nav bar on small devices](wireframes/Header_mobile.png)
   -  To save screen space the navigational menu takes on the burger style.
 
-\
-&nbsp;
-![Nav bar on small devices](wireframes/Header_mobile.png)
+
 
   - When pressed, it opens up the main menu with all the links available.
 
-    \
-    &nbsp;
-![Nav bar on small devices expanded](wireframes/Header_mobile_menu.png)
-
+    ![Nav bar on small devices expanded](wireframes/Header_mobile_menu.png)
 \
 &nbsp;
 [Back to Top](#table-of-contents)
