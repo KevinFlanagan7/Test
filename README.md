@@ -139,7 +139,6 @@ The wireframes are below:
 The navigation bar is fully responsive to allow for various screen sizes. It includes links to manover around the site easily and the competetion header doubles as a link back to the home screen.
 
 + Large Desktop screens (>=992px)
-
 \
 &nbsp;
     ![Navigation bar](wireframes/Header_large.png)
@@ -152,7 +151,7 @@ The navigation bar is fully responsive to allow for various screen sizes. It inc
     &nbsp;
     
     
-    + iPad devices (<992px)
++ iPad devices (<992px)
 \
 &nbsp;
     - Like the desktop this also spans the full width of the device and with all navigational links (Home, Gallery, Play Golf (Registration page).
