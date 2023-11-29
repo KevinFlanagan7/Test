@@ -29,6 +29,7 @@ Welcome to the Midlands Golf Classic. This site gives information about the golf
 - [Features](#features)
   - [Existing Features](#existing-features)
     - [Navigation Bar](#navigation-bar)
+    - [Landing Page](#landing-page)
 
 # UX
 
@@ -147,8 +148,8 @@ The navigation bar is fully responsive to allow for various screen sizes. It inc
     -   In order for the user to visably see which of the links they are hovering over there is a bar below the text.
 
     ![Navigation bar on hover](wireframes/Header_large_hover.png)
-    \
-    &nbsp;
+\
+&nbsp;
     
     
 + iPad devices (<992px)
@@ -156,8 +157,8 @@ The navigation bar is fully responsive to allow for various screen sizes. It inc
 &nbsp;
         ![Nav bar on iPad devices](wireframes/Header_large.png)
     - Like the desktop this also spans the full width of the device and with all navigational links (Home, Gallery, Play Golf (Registration page)
-    \
-    &nbsp;
+\
+&nbsp;
 
 
 - Phone devises (>768px)
@@ -168,12 +169,28 @@ The navigation bar is fully responsive to allow for various screen sizes. It inc
 
   - When pressed, it opens up the main menu with all the links available.
 
-    ![Navigation bar on hover](wireframes/Header_mobile_menu.png)
-    \
-    &nbsp;
+![Navigation bar on hover](wireframes/Header_mobile_menu.png)
+\
+&nbsp;
 
 \
 &nbsp;
 [Back to Top](#table-of-contents)
 \
 &nbsp; 
+
+### Landing Page
+
++ The landing page image
+    - The image gives the user instant knowledge of what is involved in the club, and with added animation draws their eye to the site.
+    - The text gives instant information to the user on what the club is. With the added animation of fading in slightly behind the image, it makes the user keep interest. 
+\
+&nbsp;
+
+    ![Landing Page](images/hero.jpg)
+
+\
+&nbsp;
+[Back to Top](#table-of-contents)
+\
+&nbsp;
