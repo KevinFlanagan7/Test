@@ -141,12 +141,12 @@ The navigation bar is fully responsive to allow for various screen sizes. It inc
 + Large Desktop screens (>=992px)
 \
 &nbsp;
-    ![Navigation bar](wireframes/Header_large.png)
+        ![Navigation bar](wireframes/Header_large.png)
     -   Spanning the full width of the device and with all navigational links (Home, Gallery, Play Golf (Registration page), this gives ease and clear use to the end user.
 
     -   In order for the user to visably see which of the links they are hovering over there is a bar below the text.
 
-    ![Navigation bar on hover](wireframes/Header_large_hover.png)
+        ![Navigation bar on hover](wireframes/Header_large_hover.png)
     \
     &nbsp;
     
@@ -154,7 +154,7 @@ The navigation bar is fully responsive to allow for various screen sizes. It inc
 + iPad devices (<992px)
 \
 &nbsp;
-    ![Nav bar on iPad devices](wireframes/Header_large.png)
+        ![Nav bar on iPad devices](wireframes/Header_large.png)
     - Like the desktop this also spans the full width of the device and with all navigational links (Home, Gallery, Play Golf (Registration page)
     \
     &nbsp;
@@ -163,14 +163,16 @@ The navigation bar is fully responsive to allow for various screen sizes. It inc
 + Phone devices (<768px)
 \
 &nbsp;
-    ![Nav bar on small devices](wireframes/Header_mobile.png)
-  -  To save screen space the navigational menu takes on the burger style.
+        ![Nav bar on small devices](wireframes/Header_mobile.png)
+    -  To save screen space the navigational menu takes on the burger style.
 
 
 
-  - When pressed, it opens up the main menu with all the links available.
+    - When pressed, it opens up the main menu with all the links available.
 
-    ![Nav bar on small devices expanded](wireframes/Header_mobile_menu.png)
+        ![Nav bar on small devices expanded](wireframes/Header_mobile_menu.png)
+
+        
 \
 &nbsp;
 [Back to Top](#table-of-contents)
