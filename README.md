@@ -160,19 +160,17 @@ The navigation bar is fully responsive to allow for various screen sizes. It inc
     &nbsp;
 
 
-+ Phone devices (<768px)
+- Phone devises (>768px)
 \
 &nbsp;
-        ![Nav bar on small devices](wireframes/Header_mobile.png)
-    -  To save screen space the navigational menu takes on the burger style.
+        ![Navigation bar](wireframes/Header_mobile.png)
+  - To save screen space the navigational menu takes on the burger style.
 
-    - When pressed, it opens up the main menu with all the links available.
+  - When pressed, it opens up the main menu with all the links available.
 
-      ![Nav bar on small devices expanded](wireframes/Header_mobile_menu.png)
-      \
-      &nbsp;
-
-        
+    ![Navigation bar on hover](wireframes/Header_mobile_menu.png)
+    \
+    &nbsp;
 
 \
 &nbsp;
