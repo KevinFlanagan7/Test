@@ -25,9 +25,9 @@ This site gives some information about the golf classic, It also gives the abili
     - [Colours](#colours)
     - [Structure](#structure)
 - [Wireframes](#wireframes)
-    - [\[Desktop Wireframe\]( "Desktop wireframe")](#desktop-wireframe-desktop-wireframe)
-    - [\[Tablet Wireframe\]( "Tablet wireframe")](#tablet-wireframe-tablet-wireframe)
-    - [\[Phone Wireframe\]( "Phone wireframe")](#phone-wireframe-phone-wireframe)
+    - [Desktop Wireframe](#desktop-wireframe)
+    - [Tablet Wireframe](#tablet-wireframe)
+    - [Phone Wireframe](#phone-wireframe)
 - [Features](#features)
   - [Existing Features](#existing-features)
     - [Navigation Bar](#navigation-bar)
@@ -113,11 +113,11 @@ I have used [Balsamic](https://balsamiq.com/wireframes/ "Balsamic") to develop m
 
 The wireframes are below:
 
-### [Desktop Wireframe]( "Desktop wireframe")
+### [Desktop Wireframe](wireframes/Desktop%20Wireframe.png "Desktop wireframe")
 
-### [Tablet Wireframe]( "Tablet wireframe")
+### [Tablet Wireframe](wireframes/Tablet%20Wireframe.png "Tablet wireframe")
 
-### [Phone Wireframe]( "Phone wireframe")
+### [Phone Wireframe](wireframes/Phone%20Wireframe.png "Phone wireframe")
 
 \
 &nbsp;
