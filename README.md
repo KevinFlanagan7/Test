@@ -2,9 +2,7 @@
 
 # Goal for this Project
 
-Welcome to .
-
-This site gives some information about the golf classic, It also gives the ability to make contact with the club easily through social media or directly via the registration form.
+Welcome to the Midlands Golf Classic. This site gives information about the golf classic competetion, the location and the prizes to be won. It also gives the ability to make contact with the club easily through social media or directly via the registration form.
 
 
 ![Responsive Displays]()
@@ -79,21 +77,26 @@ This site gives some information about the golf classic, It also gives the abili
 &nbsp;
 
 ### Fonts
-I have used [Google Fonts](https://fonts.google.com/ "Google Fonts") to find a text that best suits the feel of the website. For the main text I have chosen [Merienda](https://fonts.google.com/specimen/Montserrat?query=mon "Montserrat font") as I feel it is has a sharp, simple and easy to read look. 
+I have used [Google Fonts](https://fonts.google.com/ "Google Fonts") to find a text that best suits the feel of the website. For the main text I have chosen [Merienda](https://fonts.google.com/specimen/Merienda?preview.text=Golf%20Classic&query=merienda) as I feel it is has a sharp, simple and easy to read look.
 
 ### Icons
 
-I will used some icons for my website from the [Font Awesome library](https://fontawesome.com/ "Font Awesome"). These icons will be used where there is no explination needed to their meaning like the social media links and a hamburger for navigational links on smaller devices. Other icons will be use for style to the prizes that can be won.
+I will used some icons for my website from the [Font Awesome library](https://fontawesome.com/ "Font Awesome"). These icons will be used where there is no explination needed to their meaning like the social media links and the hamburger icon for navigational links on smaller devices. Other icons will be use for style to the prize section.
 
 ### Colours
 
-I have used [Coolers](https://coolors.co/> "Coolors") to help in the selection of my colour scheme.
+I have used [Coolers](https://coolors.co/ "Coolors") to help in the selection of my colour scheme.
 
 ![Colour Pallet](wireframes/Project_colors.png)
 
+- #6e9075ff - This colour will be used as the main background colour.
+- #2b1679ff - This colour will be used as the text colour.
+- #F5F5F5 - This colour will be used as a backgroung behind images in the Prize section.
+- #3a3a3a - This colour will be used for box shadow.
+
 ### Structure
 
-I will be building my website with a mobile first mindset using the iPhone 5/SE (320px) as the smallest screen size for styling to look good on. The screen size breakpoints that I will be using are from [Bootstrap breakpoints](https://getbootstrap.com/docs/5.0/layout/breakpoints/ "Bootstrap").
+I will be building my website with a mobile first mindset using the Galaxy Fold (280px) as the smallest screen size for styling to look good on. The screen size breakpoints that I will be using are from [Bootstrap breakpoints](https://getbootstrap.com/docs/5.0/layout/breakpoints/ "Bootstrap").
 
 | Screen Size | Breakpoint |
 | ----------- | ---------- |
