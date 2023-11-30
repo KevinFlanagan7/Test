@@ -118,7 +118,7 @@ nav {
 #hero {
     height: 600px;
     width: 100%;
-    background: url("../images/1st.jpg") no-repeat center center/cover;
+    background: url("../images/landing_page.jpg") no-repeat center center/cover;
     position: relative;
     
 
@@ -140,11 +140,13 @@ nav {
 .cover-text>h3 {
     color: var(--dark-navy);
     letter-spacing: 1px;
+    align-self: center;
 }
 
 /* Prize Section */
 #prizes {
     background-color: var(--white);
+    font-size: 2rem;
     width: 100%;
     color: var(--dark-navy);
 
