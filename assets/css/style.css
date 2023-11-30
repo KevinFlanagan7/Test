@@ -121,6 +121,7 @@ nav {
     background: url("../images/landing_page.jpg") no-repeat center center/cover;
     position: relative;
     
+    
 
 }
 
@@ -278,6 +279,7 @@ nav {
     height: 40rem;
     width: 100%;
    
+   
 }
 
 /* Footer */
@@ -419,6 +421,7 @@ nav {
 
        #large-screen {
         display: flex;
+        border-bottom: 1px solid var(--shadow-gray);
        }
 
        #register, #map-wrapper {
@@ -426,7 +429,25 @@ nav {
        }
 
        #register {
-        padding: 2rem 10rem;
+        padding: 10rem;
        }
+
+       #map-wrapper {
+        padding: 10rem;
+        background-color: var(--dark-green);
+        
+       }
+
+       #map {
+        border: 1px solid var(--shadow-gray);
+       }
+
+       #hero {
+        margin-top: 8rem;
+       }
+
+        .reg-button {
+            margin-top: 4rem;
+        }
 
 }
