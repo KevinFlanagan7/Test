@@ -182,11 +182,12 @@ The navigation bar is fully responsive to allow for various screen sizes. It inc
 ### Landing Page
 
 + The landing page image
+        -
    
 \
 &nbsp;
 
-![Landing Page](images/landing_page.jpg)
+        ![Landing Page](images/landing_page.jpg)
 
 \
 &nbsp;
