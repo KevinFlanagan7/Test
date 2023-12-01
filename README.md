@@ -187,7 +187,7 @@ The navigation bar is fully responsive to allow for various screen sizes. It inc
 \
 &nbsp;
 
-        ![Landing Page](wireframes/landing_page.jpg))
+        ![Landing Page](wireframes/landing_page.jpg)
 
 \
 &nbsp;
