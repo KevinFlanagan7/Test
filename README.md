@@ -182,8 +182,7 @@ The navigation bar is fully responsive to allow for various screen sizes. It inc
 ### Landing Page
 
 + The landing page image
-    - The image gives the user instant knowledge of what is involved in the club, and with added animation draws their eye to the site.
-    - The text gives instant information to the user on what the club is. With the added animation of fading in slightly behind the image, it makes the user keep interest. 
+   
 \
 &nbsp;
 
