@@ -287,11 +287,13 @@ nav {
 }
 
 #social-networks i {
-    font-size: 2.5rem;
+    font-size: 3rem;
     padding: .5rem;
     color: var(--dark-navy);
     
 }
+
+
 
 /* Media query for Gallery: large or landscape phones (576px and up) Masonary view */
 @media screen and (min-width: 576px) {
@@ -395,39 +397,46 @@ nav {
 
 
 }
-        /* Large devices (laptops and desktops, 992px and up) */
-        @media screen and (min-width: 992px) 
+    /* Large devices (laptops and desktops, 992px and up) */
+    @media screen and (min-width: 992px) 
 {
        
 
 
-            #menu a:hover {
-                border-bottom: 1px solid var(--dark-navy);
-            }
+    #menu a:hover {
+        border-bottom: 1px solid var(--dark-navy);
+        }
         
-        /* Prize section */
+    /* Prize section */
 
 
     
-        .portugal img, .ashford-castle img, .k-club img {
-        width: 80%;
-        }
+    .portugal img, .ashford-castle img, .k-club img {
+    width: 80%;
+    }
 
+    .k-club, .portugal {
+        text-align: start;
+    }
+       
+       
+       
        #large-screen {
         display: flex;
         
+        
+        
        }
-
-       
-       
 
        #register, #map-wrapper {
         width: 50%;
+        box-shadow: 0 -2px 2px var(--shadow-gray) inset;
         
        }
 
        #register {
         padding: 10rem;
+        
        }
 
        #map-wrapper {
