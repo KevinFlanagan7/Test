@@ -16,7 +16,7 @@ html {
 
 :root {
     --dark-green: #6e9075ff;
-    --dark-navy: black;
+    --dark-navy: #000000;
     --white: #F5F5F5;
     --shadow-gray: #3a3a3a;
 }
@@ -115,8 +115,7 @@ nav {
 #about {
     background-color: var(--dark-green);
     text-align: center;
-    padding-top: 1rem;
-    
+    padding-top: 1rem;  
 }
 
 #about h2 {
@@ -253,6 +252,10 @@ nav {
     color: var(--dark-navy);
 }
 
+.hidden-heading {
+    display: none;
+}
+
 /* Media query for Gallery: large or landscape phones (576px and up) Masonary view */
 @media screen and (min-width: 576px) {
     .photos {
@@ -263,7 +266,6 @@ nav {
     #register {
         padding: 2rem 14rem;
     }
-
 }
 
 /* Media query: tablets and larger (768px and up) */
@@ -441,14 +443,11 @@ nav {
     }
 
     #logo {
-        font-size: 4rem;
-        
+        font-size: 4rem;   
     }
 
     nav {
         font-size: 2rem;
         padding-right: 2rem;
     }
-
-
 }
