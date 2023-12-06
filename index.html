@@ -23,8 +23,8 @@
 <body>
 
     <header>
-        <a href="#hero">
-            <h2 id="logo">Golf Classic</h2>
+        <a href="#hero" class="header-text">
+            <h2 id="logo" class="header-style">Golf Classic</h2>
         </a>
 
         <input type="checkbox" id="nav-toggle" name="nav-toggle">
@@ -34,10 +34,14 @@
 
         <nav>
             <ul id="menu">
-                <li><a href="#hero" aria-label="Go to the home section">Home</a></li>
-                <li><a href="#about" aria-label="Go to the About section">About</a></li>
-                <li><a href="#gallery" aria-label="Go to the gallery section">Gallery</a></li>
-                <li><a href="#register" aria-label="Go to the play golf section">Sign up</a></li>
+                <li class="menu-list"><a href="#hero" class="header-text" aria-label="Go to the home section">Home</a>
+                </li>
+                <li class="menu-list"><a href="#about" class="header-text"
+                        aria-label="Go to the About section">About</a></li>
+                <li class="menu-list"><a href="#gallery" class="header-text"
+                        aria-label="Go to the gallery section">Gallery</a></li>
+                <li class="menu-list"><a href="#register" class="header-text"
+                        aria-label="Go to the play golf section">Sign up</a></li>
             </ul>
         </nav>
     </header>
@@ -46,14 +50,14 @@
     <main>
         <section id="hero">
             <div class="cover-text">
-                <h2>Midland Golf Classic</h2>
-                <h3>Ballinalsoe Golf Club June 7th-9th</h3>
+                <h2 class="hero-text">Midland Golf Classic</h2>
+                <h3 class="hero-text">Ballinalsoe Golf Club June 7th-9th</h3>
             </div>
         </section>
 
         <!--About section-->
         <section id="about">
-            <h2>About</h2>
+            <h2 class="style-h2 header-style">About</h2>
 
             <div id="crest">
                 <div class="history">
@@ -74,54 +78,55 @@
         <!-- Prize section-->
 
         <section id="prizes">
-            <h2>Great Prizes to be Won</h2>
+            <h2 class="style-h2 header-style">Great Prizes to be Won</h2>
 
-            <div id="first-prize">
+            <div id="first-prize" class="prizes">
 
-                <div class="holiday">
-                    <h3>Foreign Holiday<i class="fa-solid fa-plane-departure"></i></h3>
+                <div class="holiday prize-locations prize-text">
+                    <h3 class="header-style">Foreign Holiday<i class="fa-solid fa-plane-departure"></i></h3>
                     <span class="horizontal-line"></span>
-                    <p>
+                    <p class="prize-info">
                         Win a fabulous golf trip for four to Clube de Golfe Santo da Serra, Madeira, Portugal.
                     </p>
                 </div>
 
-                <div class="portugal">
-                    <img src="assets/images/Portugal.jpg" alt="Clube de Golfe Santo da Serra, Madeira">
+                <div class="portugal prize-locations">
+                    <img src="assets/images/Portugal.jpg" class="prize-images"
+                        alt="Clube de Golfe Santo da Serra, Madeira">
                 </div>
             </div>
 
 
 
-            <div id="second-prize">
+            <div id="second-prize" class="prizes">
 
-                <div class="hotel-break">
-                    <h3>Hotel break for four<i class="fa-solid fa-hotel"></i></h3>
+                <div class="hotel-break prize-locations prize-text">
+                    <h3 class="header-style">Hotel break for four<i class="fa-solid fa-hotel"></i></h3>
                     <span class="horizontal-line"></span>
-                    <p>
-                        Weekend Hotl bteak for four in the luxurious Ashford Castle.
+                    <p class="prize-info">
+                        Weekend Hotel break for four in the luxurious Ashford Castle.
                     </p>
                 </div>
 
-                <div class="ashford-castle">
-                    <img src="assets/images/Ashford_Castle.jpg" alt="Photo of Ashford Castle">
+                <div class="ashford-castle prize-locations">
+                    <img src="assets/images/Ashford_Castle.jpg" class="prize-images" alt="Photo of Ashford Castle">
 
                 </div>
 
             </div>
 
-            <div id="third-prize">
+            <div id="third-prize" class="prizes">
 
-                <div class="golf-voucher">
-                    <h3>Golf trip for K-Club<i class="fa-solid fa-golf-ball-tee"></i></h3>
+                <div class="golf-voucher prize-locations prize-text">
+                    <h3 class="header-style">Golf trip for K-Club<i class="fa-solid fa-golf-ball-tee"></i></h3>
                     <span class="horizontal-line"></span>
-                    <p>
+                    <p class="prize-info">
                         Golf voucher for four on the Palmer North Ryder cup Course.
                     </p>
                 </div>
 
-                <div class="k-club">
-                    <img src="assets/images/K-club.jpg" alt="Photo of K-Club golf course">
+                <div class="k-club prize-locations">
+                    <img src="assets/images/K-club.jpg" class="prize-images" alt="Photo of K-Club golf course">
 
                 </div>
 
@@ -132,7 +137,7 @@
         <!--Gallery Section-->
 
         <section id="gallery">
-            <h2>Course Gallery</h2>
+            <h2 class="style-h2 header-style">Course Gallery</h2>
 
             <div class="photos">
                 <img src="assets/images/13th.jpg" alt="Picture of golf course">
@@ -155,7 +160,7 @@
 
                 <form action="https://formdump.codeinstitute.net" id="register-form" method="POST">
 
-                    <h2>Sign Up! <i class="fa-solid fa-address-card"></i></h2>
+                    <h2 class="header-style">Sign Up! <i class="fa-solid fa-address-card"></i></h2>
 
                     <label for="first_name">First Name</label>
                     <input type="text" name="first_name" id="first_name" class="text-input" required>

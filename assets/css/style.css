@@ -8,26 +8,29 @@
     box-sizing: border-box;
 }
 
+/* With Font size of 62.5%, 1rem equals 10px */
 html {
     font-size: 62.5%;
     scroll-behavior: smooth;
     scroll-padding-top: 4rem;
 }
 
+/* Sets colours throughout website */
 :root {
     --dark-green: #6e9075ff;
-    --dark-navy: #000000;
+    --dark-black: #000000;
     --white: #F5F5F5;
     --shadow-gray: #3a3a3a;
 }
 
-/* General styles */
+/* General body and header styles */
 body {
+    min-height: 100%;
     display: flex;
     flex-direction: column;
     font-family: 'Merienda', sans-serif;
     font-size: 1.6rem;
-    color: var(--dark-navy);
+    color: var(--dark-black);
 }
 
 header {
@@ -44,24 +47,22 @@ header {
     align-items: baseline;
 }
 
-header a {
-    color: var(--dark-navy);
-    text-decoration: none;
-}
-
-h1,
-h2,
-h3 {
-    text-transform: uppercase;
-    letter-spacing: 2px;
-}
-
 #menu {
     letter-spacing: 1px;
     list-style-type: none;
 }
 
-#menu>li {
+.header-text {
+    color: var(--dark-black);
+    text-decoration: none;
+}
+
+.header-style {
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.menu-list {
     margin-bottom: 1rem;
 }
 
@@ -106,8 +107,7 @@ nav {
     padding: 1rem 0 1rem 1rem;
 }
 
-.cover-text>h2,
-.cover-text>h3 {
+.hero-text {
     letter-spacing: 1px;
 }
 
@@ -118,8 +118,8 @@ nav {
     padding-top: 1rem;  
 }
 
-#about h2 {
-    margin-bottom: 1rem;
+.style-h2 {
+    margin-top: 1rem;
     font-size: 3rem;
 }
 
@@ -128,7 +128,7 @@ nav {
     padding: 4rem 0 4rem 0;
 }
 
-/* Prize Section */
+/* Prizes Section */
 #prizes {
     background-color: var(--white);
     text-align: center;
@@ -139,42 +139,20 @@ nav {
     display: block;
     width: 100%;
     height: 2px;
-    background: var(--dark-navy);
+    background: var(--dark-black);
 }
 
-#prizes h2 {
-    margin-bottom: 1rem;
-    font-size: 3rem;
-}
-
-.portugal img {
+.prize-images {
     width: 100%;
     border-radius: 40%;
     padding: 1rem 0 1rem 0;
 }
 
-.ashford-castle img {
-    width: 100%;
-    border-radius: 40%;
-    padding: 1rem 0 1rem 0;
-}
-
-.k-club img {
-    width: 100%;
-    border-radius: 40%;
-    padding: 1rem 0 1rem 0;
-}
-
-/* Gallery Styles */
+/* Gallery Section */
 #gallery {
     background-color: var(--white);
     text-align: center;
     padding-top: 1rem;
-}
-
-#gallery h2 {
-    margin-bottom: 1rem;
-    font-size: 3rem;
 }
 
 .photos img {
@@ -197,7 +175,7 @@ nav {
 }
 
 .text-input {
-    color: var(--dark-navy);
+    color: var(--dark-black);
     width: 100%;
     height: 2.5rem;
     margin: 1rem 0 1rem 0;
@@ -216,7 +194,7 @@ nav {
 
 .date-input {
     background-color: var(--white);
-    color: var(--dark-navy);
+    color: var(--dark-black);
     font-size: 1.6rem;
     padding: 2px;
 }
@@ -226,14 +204,18 @@ nav {
     border-radius: 2px;
     padding: 1.5rem 3.2rem;
     font-size: 1.6rem;
-    background-color: var(--dark-navy);
+    background-color: var(--dark-black);
     color: var(--white);
 }
 
-/* Map section */
+/* location Map section */
 #map {
     height: 40rem;
     width: 100%;
+}
+
+.hidden-heading {
+    display: none;
 }
 
 /* Footer */
@@ -249,14 +231,10 @@ nav {
 #social-networks i {
     font-size: 3rem;
     padding: .5rem;
-    color: var(--dark-navy);
+    color: var(--dark-black);
 }
 
-.hidden-heading {
-    display: none;
-}
-
-/* Media query for Gallery: large or landscape phones (576px and up) Masonary view */
+/* Media query: large or landscape phones (576px and up) Masonary view */
 @media screen and (min-width: 576px) {
     .photos {
         column-count: 3;
@@ -280,18 +258,7 @@ nav {
         box-shadow: none;
         width: fit-content;
         padding-right: 1rem;
-    }
-
-    #menu {
-        display: flex;
-    }
-
-    #menu>li {
-        padding-left: 1rem;
-    }
-
-    .nav-toggle-label {
-        display: none;
+        font-size: 1.8rem;
     }
 
     #logo {
@@ -299,9 +266,21 @@ nav {
         line-height: 7.5rem;
     }
 
-    /* Hero */
+    #menu {
+        display: flex;
+    }
+
+    .menu-list {
+        padding-left: 2rem;
+    }
+
+    .nav-toggle-label {
+        display: none;
+    }
+
+    /* Hero section */
     .cover-text {
-        width: 25rem;
+        width: 50rem;
         right: 0px;
     }
 
@@ -323,40 +302,29 @@ nav {
     }
 
     /* Prizes section */
-    #first-prize,
-    #second-prize,
-    #third-prize {
+    #second-prize {
+        flex-direction: row-reverse;
+    }
+
+    .prizes {
         display: flex;
     }
 
-    .holiday,
-    .portugal,
-    .hotel-break,
-    .ashford-castle,
-    .golf-voucher,
-    .k-club {
-        flex-direction: row;
+    .prize-locations {
         width: 50%;
-    }
-
-    #second-prize {
-        flex-direction: row-reverse;
     }
 
     .ashford-castle {
         text-align: end;
     }
 
-    .holiday,
-    .hotel-break,
-    .golf-voucher {
+    .prize-text {
         text-align: center;
         align-self: center;
     }
 
-    p {
-        padding-right: 5rem;
-        padding-left: 5rem;
+    .prize-info {
+        padding: 0 5rem;
     }
 
     /* Registration section */
@@ -368,7 +336,7 @@ nav {
 /* Large devices (laptops and desktops, 992px and up) */
 @media screen and (min-width: 992px) {
     #menu a:hover {
-        border-bottom: 1px solid var(--dark-navy);
+        border-bottom: 1px solid var(--dark-black);
     }
 
     /* About section */
@@ -383,9 +351,7 @@ nav {
     }
 
     /* Prize section */
-    .portugal img,
-    .ashford-castle img,
-    .k-club img {
+    .prize-images {
         width: 80%;
     }
 
@@ -394,6 +360,7 @@ nav {
         text-align: start;
     }
 
+    /* Registration and Map sections */
     #large-screen {
         display: flex;
     }
@@ -414,11 +381,7 @@ nav {
     }
 
     #map {
-        border: 1px solid var(--shadow-gray);
-    }
-
-    #hero {
-        margin-top: 8rem;
+        box-shadow: .5rem -.5rem 2rem 1rem var(--shadow-gray);
     }
 
     .reg-button {
@@ -428,6 +391,24 @@ nav {
 
 /* Large devices (Desktops, 1200px and up) */
 @media screen and (min-width: 1200px){
+    #logo {
+        font-size: 4rem;   
+    }
+
+    nav {
+        font-size: 2rem;
+        padding-right: 2rem;   
+    }
+
+    .menu-list {
+        padding-left: 6rem;
+    }
+
+    /* About section */
+    .style-h2 {
+        font-size: 4rem;
+    }
+
     .ballinasloe-logo img {
         padding: 2rem 0 4rem 0;
         width: 40%;
@@ -436,18 +417,16 @@ nav {
     .history {
         padding-left: 10rem;
         padding-bottom: 10rem;
+        font-size: 2rem;
     }
 
+    /* Prize section */
+    .prizes {
+        font-size: 2rem;
+    }
+
+    /* Registration section */
     #register {
         padding: 10rem 20rem 0 10rem;
-    }
-
-    #logo {
-        font-size: 4rem;   
-    }
-
-    nav {
-        font-size: 2rem;
-        padding-right: 2rem;
     }
 }
