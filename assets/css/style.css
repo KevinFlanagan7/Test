@@ -1,20 +1,6 @@
 /* Google fonts import */
 @import url('https://fonts.googleapis.com/css2?family=Merienda:wght@300;400;700&display=swap');
 
-/* Asterisk wildcard selector to override default styles added by the browser */
-* {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-}
-
-/* With Font size of 62.5%, 1rem equals 10px */
-html {
-    font-size: 62.5%;
-    scroll-behavior: smooth;
-    scroll-padding-top: 2.5rem;
-}
-
 /* Sets colours throughout website */
 :root {
     --dark-green: #6e9075ff;
@@ -23,442 +9,131 @@ html {
     --shadow-gray: #3a3a3a;
 }
 
-/* General body and header styles */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/* With Font size of 62.5%, 1rem equals 10px */
+html {
+    font-size: 62.5%;  
+    height: 100vh;  
+}
+
 body {
-    height: 100vh;
     display: flex;
     flex-direction: column;
     font-family: 'Merienda', sans-serif;
     font-size: 1.6rem;
     color: var(--dark-black);
+    background: url("../images/Augusta.webp") no-repeat center center/cover;
+    align-items: center;
 }
 
-header {
-    background-color: var(--dark-green);
-    /*text-transform: uppercase;
-    letter-spacing: 2px;*/
-    padding: 0 1.6rem .6rem 1.6rem;
-    display: flex;
-    position: fixed;
-    z-index: 99;
+#heading {
+    text-align: center;
     width: 100%;
-    box-shadow: 0 2px 2px var(--shadow-gray);
-    justify-content: space-between;
-    align-items: baseline;
+    font-size: 2.5rem;
+    background-color: rgba(110, 144, 117, 0.8);
 }
 
-#menu {
-    letter-spacing: 1px;
+#logo {    
+    height: 6rem;
+    margin-top: 1rem;
+    border-radius: 2rem;     
+}
+
+#quiz-area {
+    position: absolute;
+    width: 80%;
+    height: 48rem;
+    top: 12rem;
+    background-color: rgba(110, 144, 117, 0.8);
+    text-align: center;
+    border-radius: 3rem;  
+}
+
+#instructions-list {
     list-style-type: none;
-}
-
-.header-text {
-    color: var(--dark-black);
-    text-decoration: none;
-}
-
-.header-style {
-    text-transform: uppercase;
-    letter-spacing: 1px;
-}
-
-.menu-list {
     margin-bottom: 1rem;
 }
 
-/* Navbar styles with dropdown toggle */
-nav {
+#name-box {
+    margin-top: 3rem;   
+}
+
+.name-input, .btn {
+    height: 3rem;
+    width: 20rem;
+    font-size: 1.6rem;
+    border-radius: 1rem;
+    background-color: var(--white);
+}
+
+#start-quiz {
+    margin-top: 3rem;
+
+}
+
+.start-btn {
+    margin-bottom: 3rem;
+}
+
+footer {
     position: absolute;
-    background-color: var(--dark-green);
-    width: 30%;
-    right: 0;
-    padding: 1rem 1rem 0 1rem;
-    display: none;
-    top: 100%;
-}
-
-/* Nav toggle check box */
-#nav-toggle:checked~nav {
-    display: block;
-}
-
-#nav-toggle {
-    display: none;
-}
-
-.nav-toggle-label {
-    font-size: 2.5rem;
-}
-
-/* Hero image section */
-#hero {
-    height: 60rem;
     width: 100%;
-    background: url("../images/landing_page.jpg") no-repeat center center/cover;
-    position: relative;
+    left: 0;
+    bottom: 0; 
+    text-align: center;   
 }
 
-.cover-text {
-    background-color: rgba(110, 144, 117, 0.8);
-    position: absolute;
-    bottom: 2rem;
-    right: 0;
-    width: 65%;
-    padding: 1rem 0 1rem 1rem;
-}
-
-.hero-text {
-    letter-spacing: 1px;
-}
-
-/* About section */
-#about {
-    background-color: var(--dark-green);
-    text-align: center;
-    padding: 1rem;  
-}
-
-.style-h2 {
-    margin-top: 1rem;
-    font-size: 3rem;
-}
-
-.ballinasloe-logo img {
-    width: 50%;
-    padding: 4rem 0 2rem 0;
-}
-
-/* Prizes Section */
-#prizes {
-    background-color: var(--white);
-    text-align: center;
-    padding-top: 1rem;
-}
-
-.horizontal-line {
-    display: block;
-    width: 100%;
-    height: 2px;
-    background: var(--dark-black);
-}
-
-.prize-images {
-    width: 100%;
-    border-radius: 40%;
-    padding: 1rem 0 1rem 0;
-}
-
-/* Gallery Section */
-#gallery {
-    background-color: var(--white);
-    text-align: center;
-    padding-top: 1rem;
-}
-
-.photos img {
-    width: 100%;
-    line-height: 1.6rem;
-}
-
-.photos {
-    line-height: 0;
-}
-
-/* Registration section */
-#register {
-    background-color: var(--dark-green);
-    padding: 2rem 6rem;
-}
-
-#register-form h2 {
-    margin-bottom: 1.2rem;
-}
-
-.text-input {
-    color: var(--dark-black);
-    width: 100%;
-    height: 2.5rem;
-    margin: 1rem 0 1rem 0;
-    border: 1px solid var(--white);
-    border-radius: 2px;
-    padding: 0 1rem;
-}
-
-#calendar {
-    margin-top: 2rem;
-}
-
-#calendar label {
-    padding-right: 1rem;
-}
-
-.date-input {
-    background-color: var(--white);
-    color: var(--dark-black);
-    font-size: 1.6rem;
-    padding: 2px;
-}
-
-.reg-button {
-    margin-top: 2rem;
-    border-radius: 2px;
-    padding: 1.5rem 3.2rem;
-    font-size: 1.6rem;
-    background-color: var(--dark-black);
-    color: var(--white);
-}
-
-.sign-up {
-    height: 100vh;
-    width: 100%;
-    background-color: var(--dark-green);
-    color: var(--dark-black);
-    font-size: 2.3rem;
-    text-align: center;
-    padding-top: 25rem;
-}
-
-.home-link {
-    font-size: 1.6rem;
-}
-
-/* location Map section */
-#map {
-    height: 40rem;
-    width: 100%;
-}
-
-.hidden-heading {
-    display: none;
-}
-
-/* Footer Section */
-#social-networks {
-    background-color: var(--dark-green);
-    text-align: center;
-    padding: 2rem 0;
-    display: flex;
-    justify-content: space-evenly;
-    list-style-type: none;
-}
-
-#social-networks i {
-    font-size: 3rem;
-    padding: .5rem;
-    color: var(--dark-black);
-}
-
-/* Media query: large or landscape phones (576px and up) Masonary view */
-@media screen and (min-width: 576px) {
-    .photos {
-        column-count: 3;
-        column-gap: 0;
-    }
-}
 
 /* Media query: tablets and larger (768px and up) */
 @media screen and (min-width: 768px) {
-    html {
-        scroll-padding-top: 6rem;
+
+    #quiz-area {
+        top: 12rem; 
     }
 
-    nav {
-        display: block;
-        position: relative;
-        box-shadow: none;
-        width: fit-content;
-        padding-right: 1rem;
-        font-size: 1.8rem;
+    #name-box {
+        margin-top: 5rem;
     }
 
-    #logo {
-        font-size: 3rem;
-        line-height: 7.5rem;
-    }
-
-    #menu {
-        display: flex;
-    }
-
-    .menu-list {
-        padding-left: 2rem;
-    }
-
-    .nav-toggle-label {
-        display: none;
-    }
-
-    /* Hero section */
-    .cover-text {
-    width: 30%;
-    }
-
-    /* About section */
-    #crest {
-        display: flex;
-    }
-
-    .history, .ballinasloe-logo {
-        width: 50%;
-    }
-
-    .ballinasloe-logo img {
-        padding: 0 0 1rem 0;
-    }
-
-    .history {
-        padding: 0 0 2rem 5rem;
-    }
-
-    /* Prizes section */
-    #second-prize {
-        flex-direction: row-reverse;
-    }
-
-    .prizes {
-        display: flex;
-    }
-
-    .prize-locations {
-        width: 50%;
-    }
-
-    .ashford-castle {
-        text-align: end;
-    }
-
-    .prize-text {
-        text-align: center;
-        align-self: center;
-    }
-
-    .prize-info {
-        padding: 0 5rem;
-    }
-
-    /* Registration section */
-    #register {
-        padding: 2rem 20rem;
-    }
-
-    .sign-up {
-        font-size: 3rem;
-    }
-
-    .home-link {
+    .name-input, .btn {
+        height: 3.5rem;
+        width: 25rem;
         font-size: 2rem;
+        border-radius: 1rem;
     }
+
+    .btn {
+        margin-top: 4rem;
+    }
+
+    .start-btn {
+        margin-right: 3rem;   
+    }
+
 }
 
 /* Large devices (laptops and desktops, 992px and up) */
 @media screen and (min-width: 992px) {
-    #menu a:hover {
-        border-bottom: 1px solid var(--dark-black);
+
+    #quiz-area {
+        width: 70%;
     }
 
-    /* Hero section */
-    .cover-text {
-        width: 25%;
-        }
-
-    /* About section */
-    .history {
-        align-self: center;
-        padding-left: 10rem;
-    }
-
-    .ballinasloe-logo img {
-        padding: 2rem 0 4rem 0;
-        width: 40%;
-    }
-
-    /* Prize section */
-    .prize-images {
-        width: 80%;
-    }
-
-    .k-club,
-    .portugal {
-        text-align: start;
-    }
-
-    /* Registration and Map sections */
-    #large-screen {
-        display: flex;
-    }
-
-    #register,
-    #map-wrapper {
-        width: 50%;
-        box-shadow: 0 -2px 2px var(--shadow-gray) inset;
-    }
-
-    #register {
-        padding: 10rem;
-    }
-
-    #map-wrapper {
-        padding: 10rem;
-        background-color: var(--dark-green);
-    }
-
-    #map {
-        box-shadow: .5rem -.5rem 2rem 1rem var(--shadow-gray);
-    }
-    
-    .reg-button {
-        margin-top: 4rem;
-    }
 }
 
 /* Large devices (Desktops, 1200px and up) */
-@media screen and (min-width: 1200px){
-    #logo {
-        font-size: 4rem;   
+@media screen and (min-width: 1200px) {
+
+    #quiz-area {
+        width: 60%;
+        
     }
 
-    nav {
-        font-size: 2rem;
-        padding-right: 2rem;   
-    }
-
-    .menu-list {
-        padding-left: 6rem;
-    }
-
-    /* About section */
-    .style-h2 {
-        font-size: 4rem;
-    }
-
-    .ballinasloe-logo img {
-        padding: 2rem 0 4rem 0;
-        width: 40%;
-    }
-
-    .history {
-        padding-left: 10rem;
-        padding-bottom: 10rem;
-        font-size: 2rem;
-    }
-
-    /* Prize section */
-    .prizes {
-        font-size: 2rem;
-    }
-
-    /* Registration section */
-    #register {
-        padding: 10rem 20rem 0 10rem;
-    }
-
-    .sign-up {
-        font-size: 4rem;
-    }
-
-    .home-link {
-        font-size: 2.5rem;
-    }
 }
 
 

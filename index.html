@@ -5,201 +5,61 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Meta tags for search engines -->
-    <meta name="description" content="Golf classic, Golf, Midlands, Ireland">
-    <meta name="keywords" content="Classic, golf, golfers, Midlands, Ireland,sport">
-    <!-- Title -->
-    <title>Golf Classic</title>
+    <meta name="description" content="A Quiz about The Masters golf Tournament">
+    <meta name="keywords" content="Quiz, The Masters, The Masters Quiz">
+
     <!-- Favicon -->
     <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon/favicon-16x16.png">
+
+    <!-- Font Awesome kit -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+
     <!-- Stylesheet -->
     <link rel="stylesheet" href="assets/css/style.css">
+
+    <title>Masters Quiz</title>
 </head>
 
 <body>
-    <header>
-        <a href="#hero" class="header-text">
-            <h2 id="logo" class="header-style">Golf Classic</h2>
-        </a>
-        <input type="checkbox" id="nav-toggle" name="nav-toggle">
-        <label for="nav-toggle" class="nav-toggle-label">
-            <i class="fa-solid fa-bars"></i>
-        </label>
-        <nav>
-            <ul id="menu">
-                <li class="menu-list"><a href="#hero" class="header-text" aria-label="Go to the home section">Home</a>
-                </li>
-                <li class="menu-list"><a href="#about" class="header-text"
-                        aria-label="Go to the About section">About</a></li>
-                <li class="menu-list"><a href="#gallery" class="header-text"
-                        aria-label="Go to the gallery section">Gallery</a></li>
-                <li class="menu-list"><a href="#register" class="header-text"
-                        aria-label="Go to the play golf section">Sign up</a></li>
+    <h1 id="heading">
+        The Masters Quiz
+    </h1>
+    <img src="assets/images/masters-logo.png" alt="Logo" id="logo">
+
+    <div id="quiz-area">
+
+        <!-- Instructions section -->
+        <div id="instructions">
+
+            <h2>Instructions</h2>
+            <ul id="instructions-list">
+                <li>Enter Your Name</li>
+                <li>Click Start</li>
+                <li>Read Question</li>
+                <li>Go to the next question and repeat</li>
+                <li>Answer all 20 questions and click Finish</li>
+                <li>Read your result message</li>
+                <li>Select Home to go back to the main page</li>
             </ul>
-        </nav>
-    </header>
+        </div>
 
-    <main>
-        <!-- Landing page/Hero image section -->
-        <section id="hero">
-            <div class="cover-text">
-                <h2 class="hero-text">Midland Golf Classic</h2>
-                <h3 class="hero-text">Ballinalsoe Golf Club June 7th-9th</h3>
-            </div>
-        </section>
+        <!-- Name  -->
+        <div id="name-box">
+            <input type="text" id="name" name="name" class="name-input" placeholder="Enter Name"
+                onfocus="closeMessage('message')">
+        </div>
 
-        <!--About section-->
-        <section id="about">
-            <h2 class="style-h2 header-style">About</h2>
-
-            <div id="crest">
-                <div class="history">
-                    <p>Ballinasloe Golf Club is an 18 hole parkland course based in Ireland's Hidden Heartlands. The
-                        club was
-                        founded in 1894 making it one of Connacht's oldest golf clubs. The competition is open to men
-                        and
-                        ladies. The format is 18 holes singles stableford played over three days, June 7th-9th 2024.</p>
-                </div>
-
-                <div class="ballinasloe-logo">
-                    <img src="assets/images/Ballinasloe_Coat_of_Arms.png" alt="Picture of Ballinasloe golf club crest">
-                </div>
-            </div>
-        </section>
-
-        <!-- Prize section -->
-        <section id="prizes">
-            <h2 class="style-h2 header-style">Great Prizes to be Won</h2>
-
-            <div id="first-prize" class="prizes">
-                <div class="holiday prize-locations prize-text">
-                    <h3 class="header-style">Foreign Holiday<i class="fa-solid fa-plane-departure"></i></h3>
-                    <span class="horizontal-line"></span>
-                    <p class="prize-info">
-                        Win a fabulous golf trip for four to Clube de Golfe Santo da Serra, Madeira, Portugal.
-                    </p>
-                </div>
-
-                <div class="portugal prize-locations">
-                    <img src="assets/images/Portugal.jpg" class="prize-images"
-                        alt="Clube de Golfe Santo da Serra, Madeira">
-                </div>
-            </div>
-
-            <div id="second-prize" class="prizes">
-                <div class="hotel-break prize-locations prize-text">
-                    <h3 class="header-style">Hotel break for four<i class="fa-solid fa-hotel"></i></h3>
-                    <span class="horizontal-line"></span>
-                    <p class="prize-info">
-                        Weekend Hotel break for four in the luxurious Ashford Castle.
-                    </p>
-                </div>
-
-                <div class="ashford-castle prize-locations">
-                    <img src="assets/images/Ashford_Castle.jpg" class="prize-images" alt="Photo of Ashford Castle">
-                </div>
-            </div>
-
-            <div id="third-prize" class="prizes">
-                <div class="golf-voucher prize-locations prize-text">
-                    <h3 class="header-style">Golf trip for K-Club<i class="fa-solid fa-golf-ball-tee"></i></h3>
-                    <span class="horizontal-line"></span>
-                    <p class="prize-info">
-                        Golf voucher for four on the Palmer North Ryder cup Course.
-                    </p>
-                </div>
-
-                <div class="k-club prize-locations">
-                    <img src="assets/images/K-club.jpg" class="prize-images" alt="Photo of K-Club golf course">
-                </div>
-            </div>
-        </section>
-
-        <!--Gallery Section-->
-        <section id="gallery">
-            <h2 class="style-h2 header-style">Course Gallery</h2>
-
-            <div class="photos">
-                <img src="assets/images/13th.jpg" alt="Picture of 13th hole on golf course">
-                <img src="assets/images/17th.jpg" alt="Picture of 17th hole on golf course">
-                <img src="assets/images/1st.jpg" alt="Picture of 1st hole on golf course">
-                <img src="assets/images/3rd.jpg" alt="Picture of 3rd hole on golf course">
-                <img src="assets/images/5th.jpg" alt="Picture of 5th hole on golf course">
-                <img src="assets/images/7th.jpg" alt="Picture of 7th hole of golf course">
-                <img src="assets/images/Arial.jpg" alt="Picture of Arial view of golf course">
-                <img src="assets/images/practice.jpg" alt="Picture of practice area floodlit at night">
-                <img src="assets/images/green.jpg" alt="Picture of practice green floodlit at night">
-            </div>
-        </section>
-
-        <!--Registration Section-->
-        <section id="large-screen">
-            <h2 class="hidden-heading">hide heading for large screen</h2>
-            <section id="register">
-                <form action="signup.html" id="register-form" method="get">
-
-                    <h2 class="header-style">Sign Up! <i class="fa-solid fa-address-card"></i></h2>
-
-                    <label for="first_name">First Name</label>
-                    <input type="text" name="first_name" id="first_name" class="text-input" required>
-                    <br>
-
-                    <label for="last_name">Last Name</label>
-                    <input type="text" name="last_name" id="last_name" class="text-input" required>
-                    <br>
-
-                    <label for="email_address">Email</label>
-                    <input type="email" name="email_address" id="email_address" class="text-input" required>
-                    <br>
-
-                    <div id="calendar">
-                        <label for="date">Date</label>
-                        <input type="date" name="date" id="date" class="date-input" required>
-                    </div>
-
-                    <button type="submit" class="reg-button">Submit to Draw</button>
-                </form>
-            </section>
-
-            <!-- Location Map -->
-            <section id="map-wrapper">
-                <h2 class="hidden-heading">hide heading for map wrapper</h2>
-                <iframe id="map"
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2384.220596067065!2d-8.24371982292941!3d53.30349547792841!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x485c684110071de1%3A0xf00c7a819b94da0!2sBallinasloe%20Golf%20Club!5e0!3m2!1sen!2sie!4v1700658466493!5m2!1sen!2sie"
-                    loading="lazy"></iframe>
-            </section>
-        </section>
-    </main>
+        <div id="start-quiz">
+            <input type="button" class="start-btn btn" value="Start Quiz">
+            <input type="button" class="leaderboard-btn btn" value="Leaderboard">
+        </div>
+    </div>
 
     <footer>
-        <ul id="social-networks">
-            <li>
-                <a href="https://www.facebook.com/" target="_blank" rel="noopener"
-                    aria-label="Visit our Facebook page (opens in a new tab)">
-                    <i class="fa-brands fa-facebook"></i></a>
-            </li>
-
-            <li>
-                <a href="https://www.youtube.com/" target="_blank" rel="noopener"
-                    aria-label="Visit our YouTube page (opens in a new tab)">
-                    <i class="fa-brands fa-youtube-square"></i></a>
-            </li>
-
-            <li>
-                <a href="https://www.instagram.com/" target="_blank" rel="noopener"
-                    aria-label="Visit our Instagram page (opens in a new tab)">
-                    <i class="fa-brands fa-instagram"></i></a>
-            </li>
-        </ul>
-
+        Masters Quiz 2024
     </footer>
-
-    <!-- Font Awesome kit -->
-    <script src="https://kit.fontawesome.com/3b20d96fa9.js" crossorigin="anonymous"></script>
-
-
 </body>
 
 </html>
