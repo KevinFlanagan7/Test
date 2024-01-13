@@ -69,6 +69,7 @@ body {
     font-size: 1.6rem;
     border-radius: 1rem;
     background-color: var(--white);
+    color: var(--dark-black);
 }
 
 #start-quiz {
@@ -88,7 +89,6 @@ footer {
     text-align: center;   
 }
 
-
 /* Media query: tablets and larger (768px and up) */
 @media screen and (min-width: 768px) {
 
@@ -101,10 +101,12 @@ footer {
     }
 
     .name-input, .btn {
-        height: 3.5rem;
-        width: 25rem;
-        font-size: 2rem;
+        height: 3rem;
+        width: 20rem;
+        font-size: 1.6rem;
+        color: var(--dark-black);
         border-radius: 1rem;
+        background-color: var(--white);
     }
 
     .btn {
@@ -114,7 +116,6 @@ footer {
     .start-btn {
         margin-right: 3rem;   
     }
-
 }
 
 /* Large devices (laptops and desktops, 992px and up) */
@@ -123,15 +124,13 @@ footer {
     #quiz-area {
         width: 70%;
     }
-
 }
 
 /* Large devices (Desktops, 1200px and up) */
 @media screen and (min-width: 1200px) {
 
     #quiz-area {
-        width: 60%;
-        
+        width: 60%;    
     }
 
 }
