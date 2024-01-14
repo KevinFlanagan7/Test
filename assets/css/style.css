@@ -93,6 +93,9 @@ footer {
 
 /* Media query: large or landscape phones (576px and up) Masonary view */
 @media screen and (min-width: 576px) {
+    body {
+        background: url("../images/Augusta.webp") repeat center center/cover;
+    }
 }
 
 /* Media query: tablets and larger (768px and up) */
