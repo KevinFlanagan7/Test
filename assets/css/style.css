@@ -54,9 +54,11 @@ body {
     border-radius: 3rem;  
 }
 
-#instructions-list {
-    list-style-type: none;
-    margin-bottom: 1rem;
+#instructions-list {   
+    text-align: left;
+    margin-left: 4.5rem;
+    padding: 0.5rem;
+    font-size: 1.7rem;
 }
 
 #name-box {
@@ -66,10 +68,10 @@ body {
 .name-input, .btn {
     height: 3rem;
     width: 20rem;
-    font-size: 1.6rem;
+    font-size: 1.8rem;
+    color: var(--dark-black);
     border-radius: 1rem;
     background-color: var(--white);
-    color: var(--dark-black);
 }
 
 #start-quiz {
@@ -89,33 +91,50 @@ footer {
     text-align: center;   
 }
 
+/* Media query: large or landscape phones (576px and up) Masonary view */
+@media screen and (min-width: 576px) {
+}
+
 /* Media query: tablets and larger (768px and up) */
 @media screen and (min-width: 768px) {
 
+    #heading {
+        font-size: 3rem;
+    }
+
     #quiz-area {
         top: 12rem; 
+    }
+
+    #instructions-list {   
+        text-align: left;
+        margin-left: 10rem; 
+        font-size: 2rem;
     }
 
     #name-box {
         margin-top: 5rem;
     }
 
+    .heading-h2 {
+        font-size: 3rem;
+    }
+
     .name-input, .btn {
-        height: 3rem;
-        width: 20rem;
-        font-size: 1.6rem;
-        color: var(--dark-black);
+        height: 3.5rem;
+        width: 25rem;
+        font-size: 2rem;
         border-radius: 1rem;
-        background-color: var(--white);
     }
 
     .btn {
-        margin-top: 4rem;
+        margin-top: 2rem;
     }
 
     .start-btn {
         margin-right: 3rem;   
     }
+
 }
 
 /* Large devices (laptops and desktops, 992px and up) */
@@ -124,15 +143,23 @@ footer {
     #quiz-area {
         width: 70%;
     }
+
+    #instructions-list {   
+        margin-left: 12rem;      
+    }
 }
 
 /* Large devices (Desktops, 1200px and up) */
 @media screen and (min-width: 1200px) {
 
     #quiz-area {
-        width: 60%;    
+        width: 60%;       
     }
 
+    #instructions-list {   
+        margin-left: 12rem; 
+        font-size: 2rem;
+    }
 }
 
 
