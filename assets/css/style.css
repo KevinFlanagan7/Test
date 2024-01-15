@@ -17,11 +17,11 @@
 
 /* With Font size of 62.5%, 1rem equals 10px */
 html {
-    font-size: 62.5%;  
-    height: 100vh;  
+    font-size: 62.5%;    
 }
 
 body {
+    height: 100vh;
     display: flex;
     flex-direction: column;
     font-family: 'Merienda', sans-serif;
@@ -29,6 +29,7 @@ body {
     color: var(--dark-black);
     background: url("../images/Augusta.webp") no-repeat center center/cover;
     align-items: center;
+    
 }
 
 #heading {
