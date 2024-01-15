@@ -5,5 +5,10 @@ function startQuiz() {
 
 function turnGreen() {
     let green = document.getElementById('green');
-    green.style.backgroundColor = "green";
+    green.style.backgroundColor = "rgba(110, 144, 117, 0.8)";
+}
+
+function turnBack() {
+    let white = document.getElementById('green');
+    white.style.backgroundColor = "var(--white)";
 }
