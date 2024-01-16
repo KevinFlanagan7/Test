@@ -84,13 +84,27 @@ body {
     margin-bottom: 3rem;
 }
 
-footer {
-    position: absolute;
-    width: 100%;
-    left: 0;
-    bottom: 0; 
-    text-align: center;   
+#next {
+    margin: 3rem 0;
 }
+
+#options {
+    height: 30rem;
+    background-color: green;
+    
+}
+
+
+.button {
+    height: 3rem;
+    width: 20rem;
+    font-size: 1.8rem;
+    color: var(--dark-black);
+    border-radius: 1rem;
+    background-color: var(--white);
+
+}
+
 
 /* Media query: large or landscape phones (576px and up) Masonary view */
 @media screen and (min-width: 576px) {

@@ -26,11 +26,13 @@
     <h1 id="heading">
         The Masters Quiz
     </h1>
-    <img src="assets/images/masters-logo.png" alt="Logo" id="logo">
+    <a href="index.html">
+        <img src="assets/images/masters-logo.png" alt="Logo" id="logo">
+    </a>
 
     <div id="quiz-area">
 
-        <!-- Instructions section -->
+        <!-- Instructions and Start section -->
         <div id="instructions">
 
             <h2 class="heading-h2">Instructions</h2>
@@ -42,25 +44,52 @@
                 <li>Answer all 20 questions and click Finish</li>
                 <li>Click Home or Masters logo</li>
             </ol>
+
+            <div id="name-box">
+                <input type="text" id="name" name="name" class="name-input" placeholder="Enter Name">
+            </div>
+
+            <div id="start-quiz">
+                <input type="button" id="green" class="start-btn btn" value="Start Quiz" onclick="startQuiz()">
+                <input type="button" class="leaderboard-btn btn" value="Leaderboard">
+            </div>
+
         </div>
 
-        <!-- Name  -->
-        <div id="name-box">
-            <input type="text" id="name" name="name" class="name-input" placeholder="Enter Name"
-                onfocus="closeMessage('message')">
+        <!-- Container for questions and game buttons -->
+        <div id="quiz-container" class="questions-game hide">
+
+            <h3>Welcome <span id="username"></span>!</h3>
+            <h3>Enjoy the Masters</h3>
+
+            <h4 id="question">'Questions Placeholder'</h4>
+
+            <div id="options"></div>
+
+                <div class="game-controls">
+                    <input type="button" value="Next" class="button" id="next" onclick="nextQuestion()">
+                </div>
+
+            
+
         </div>
 
-        <div id="start-quiz">
-            <input type="button" id="green" class="start-btn btn" value="Start Quiz" onclick="startQuiz();"
-                onmouseenter="turnGreen()" onmouseleave="turnBack()">
-            <input type="button" class="leaderboard-btn btn" value="Leaderboard">
+        <!-- Container with the result -->
+        <div id="result-container" class="results">
+
+            <h3>You have finished the game</h3>
+
+            <h4 id="result-message">Placeholder</h4>
+
+            <div class="quiz-controls">
+                <input type="button" value="Home" class="button" onclick="newGame()">
+            </div>
+
         </div>
-        <div id="report"></div>
+
     </div>
 
-    <footer>
-        Masters Quiz 2024
-    </footer>
+
 
     <script src="assets/js/script.js"></script>
 </body>
