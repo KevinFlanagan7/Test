@@ -50,7 +50,7 @@
             </div>
 
             <div id="start-quiz">
-                <input type="button" id="green" class="start-btn btn" value="Start Quiz" onclick="startQuiz()">
+                <input type="button" id="startquiz" class="start-btn btn" value="Start Quiz" onclick="startQuiz()">
                 <input type="button" class="leaderboard-btn btn" value="Leaderboard">
             </div>
 
@@ -60,22 +60,28 @@
         <div id="quiz-container" class="questions-game hide">
 
             <h3>Welcome <span id="username"></span>!</h3>
-            <h3>Enjoy the Masters</h3>
+            <h3>Enjoy the Masters Quiz</h3>
 
-            <h4 id="question">'Questions Placeholder'</h4>
+            <h4 id="quiz-question">'Questions Placeholder'</h4>
 
-            <div id="options"></div>
+            <div id="options-area">
+                <button id="a" class="option-btn" onclick="checkAnswer('A')">option A</button>
+                <button id="b" class="option-btn" onclick="checkAnswer('B')">option B</button>
+                <button id="c" class="option-btn" onclick="checkAnswer('C')">option C</button>
+                <button id="d" class="option-btn" onclick="checkAnswer('D')">option D</button>
+            </div>
 
-                <div class="game-controls">
-                    <input type="button" value="Next" class="button" id="next" onclick="nextQuestion()">
-                </div>
+            <div class="score-area">
+                <p class="scores">Correct Answers: <span id="score">0</span></p>
+                <p class="scores">Incorrect Answers: <span id="incorrect">0</span></p>
+              </div>
 
-            
+
 
         </div>
 
         <!-- Container with the result -->
-        <div id="result-container" class="results">
+        <div id="result-container" class="results hide">
 
             <h3>You have finished the game</h3>
 
