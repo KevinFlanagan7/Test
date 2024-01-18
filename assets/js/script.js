@@ -132,8 +132,15 @@ function checkAnswer(answer) {
   if (currentQuestion < lastQuestion) {
     currentQuestion++;
     showQuestion();
+    questionCounter();
   }
 }
+
+function questionCounter() {
+  const currentQuestionNumber = document.getElementById('current-question');
+  currentQuestionNumber.innerText = currentQuestion +1;
+}
+
 
 /*Functions to increase scores*/
 
