@@ -19,7 +19,7 @@
     <!-- Stylesheet -->
     <link rel="stylesheet" href="assets/css/style.css">
 
-    <title>Masters Quiz</title>
+    <title>Masters Quiz!</title>
 </head>
 
 <body>
@@ -34,50 +34,70 @@
 
         <!-- Instructions and Start section -->
         <div id="instructions">
-
-            <h2 class="heading-h2">Instructions</h2>
+            <h2 class="heading-h2">
+                Instructions
+            </h2>
             <ol id="instructions-list">
-                <li>Enter Your Name</li>
-                <li>Click Start</li>
-                <li>Read question </li>
-                <li>Select one of three options</li>
-                <li>Answer all 20 questions and click Finish</li>
-                <li>Click Home or Masters logo</li>
+                <li>
+                    Enter Your Name
+                </li>
+                <li>
+                    Click Start Quiz button
+                </li>
+                <li>
+                    Read question
+                </li>
+                <li>
+                    Select one of four options
+                </li>
+                <li>
+                    Answer all 10 questions and get result
+                </li>
+                <li>
+                    Click Resart Quiz or Masters logo
+                </li>
             </ol>
 
             <div id="name-box">
-                <input type="text" id="name" name="name" class="name-input" placeholder="Enter Name">
+                <input type="text" id="name" name="name" class="name-input btn" placeholder="Enter Name">
             </div>
 
             <div id="start-quiz">
                 <input type="button" id="startquiz" class="start-btn btn" value="Start Quiz" onclick="startQuiz()">
-                <input type="button" class="leaderboard-btn btn" value="Leaderboard">
             </div>
-
         </div>
 
-        <!-- Container for questions and game buttons -->
+        <!-- Container for questions and quiz buttons -->
         <div id="quiz-container" class="questions-game hide">
 
-            <h3>Welcome to the Masters Quiz <span id="username"></span>!</h3>
-            <h3>Best of Luck!</h3>
+            <h3>
+                Welcome to the Masters Quiz <span id="username"></span>!
+            </h3>
 
             <div id="question-counter">
                 Question <span id="current-question">1</span> of 10
             </div>
 
-            <h4 id="quiz-question">'Questions Placeholder'</h4>
+            <div id="quiz-question">
+                'Questions Placeholder'
+            </div>
 
             <div id="options-area">
                 <button id="a" class="option-btn" onclick="checkAnswer('A')">option A</button>
                 <button id="b" class="option-btn" onclick="checkAnswer('B')">option B</button>
+            </div>
+            <div id="options-area-1">
                 <button id="c" class="option-btn" onclick="checkAnswer('C')">option C</button>
                 <button id="d" class="option-btn" onclick="checkAnswer('D')">option D</button>
             </div>
 
-            <div class="score-area">
-                <p class="scores">Correct Answers: <span id="score">0</span></p>
-                <p class="scores">Incorrect Answers: <span id="incorrect">0</span></p>
+            <div id="score-area">
+                <p class="scores">
+                    Correct Answers: <span id="score">0</span>
+                </p>
+                <p class="scores">
+                    Incorrect Answers: <span id="incorrect">0</span>
+                </p>
             </div>
 
         </div>
@@ -85,21 +105,17 @@
         <!-- Container with the result -->
         <div id="result-container" class="results hide">
 
-            <h3>Quiz completed, below is your result!</h3>
+            <h4 id="result-message">
+                'Placeholder'
+            </h4>
 
-            <h4 id="result-message">Placeholder</h4>
-
-            <div class="quiz-controls">
+            <div id="restart-quiz">
                 <a href="index.html">
                     <input type="button" value="Restart Quiz" class="button">
                 </a>
             </div>
-
         </div>
-
     </div>
-
-
 
     <script src="assets/js/script.js"></script>
 </body>

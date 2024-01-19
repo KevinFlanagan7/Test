@@ -63,7 +63,7 @@ body {
 }
 
 #name-box {
-    margin-top: 3rem;   
+    margin-top: 4rem;   
 }
 
 .name-input, .btn, .option-btn {
@@ -76,7 +76,7 @@ body {
 }
 
 #start-quiz {
-    margin-top: 3rem;
+    margin-top: 4rem;
 
 }
 
@@ -84,16 +84,9 @@ body {
     margin-bottom: 3rem;
 }
 
-#next {
-    margin: 3rem 0;
+#question-counter {
+    margin: 0.5rem 0;
 }
-
-#options {
-    height: 30rem;
-    
-    
-}
-
 
 .button {
     height: 3rem;
@@ -102,7 +95,12 @@ body {
     color: var(--dark-black);
     border-radius: 1rem;
     background-color: var(--white);
+}
 
+.option-btn {
+    margin-bottom: 1rem;
+    border: 1px solid var(--dark-black);
+    background-color: lightgray;
 }
 
 .hide {
@@ -110,10 +108,22 @@ body {
 }
 
 #quiz-question {
-    margin: 5rem 0;
+    margin: 1rem 0;
+    font-size: 2rem;
+    padding: 0.5rem;
+}
+
+#result-container {
+    margin: 10rem 0;
+}
+
+#result-message {
     font-size: 2.5rem;
 }
 
+#restart-quiz {
+    margin-top: 10rem;
+}
 
 /* Media query: large or landscape phones (576px and up) Masonary view */
 @media screen and (min-width: 576px) {
@@ -135,7 +145,7 @@ body {
 
     #instructions-list {   
         text-align: left;
-        margin-left: 10rem; 
+        margin-left: 14rem; 
         font-size: 2rem;
     }
 
@@ -158,10 +168,36 @@ body {
         margin-top: 2rem;
     }
 
-    .start-btn {
-        margin-right: 3rem;   
+    #quiz-question {
+        margin: 3rem 0;
+        font-size: 2.5rem;
+        padding: 0.5rem;
     }
 
+    #options-area {
+        margin: 4rem 0;
+    }
+
+    #a, #c{
+        margin-right: 6rem;
+    }
+
+    #score-area {
+        margin-top: 4rem;
+        font-size: 1.8rem;
+    }
+    
+    #result-container {
+        margin: 10rem 0;
+    }
+    
+    #result-message {
+        font-size: 2.5rem;
+    }
+    
+    #restart-quiz {
+        margin-top: 10rem;
+    }   
 }
 
 /* Large devices (laptops and desktops, 992px and up) */
@@ -188,5 +224,6 @@ body {
         font-size: 2rem;
     }
 }
+
 
 
