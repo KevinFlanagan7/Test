@@ -59,12 +59,12 @@
         <!-- Container for questions and game buttons -->
         <div id="quiz-container" class="questions-game hide">
 
-            <h3>Welcome <span id="username"></span>!</h3>
-            <h3>Enjoy the Masters Quiz</h3>
+            <h3>Welcome to the Masters Quiz <span id="username"></span>!</h3>
+            <h3>Best of Luck!</h3>
 
             <div id="question-counter">
                 Question <span id="current-question">1</span> of 10
-              </div>
+            </div>
 
             <h4 id="quiz-question">'Questions Placeholder'</h4>
 
@@ -78,21 +78,21 @@
             <div class="score-area">
                 <p class="scores">Correct Answers: <span id="score">0</span></p>
                 <p class="scores">Incorrect Answers: <span id="incorrect">0</span></p>
-              </div>
-
-
+            </div>
 
         </div>
 
         <!-- Container with the result -->
         <div id="result-container" class="results hide">
 
-            <h3>You have finished the game</h3>
+            <h3>Quiz completed, below is your result!</h3>
 
             <h4 id="result-message">Placeholder</h4>
 
             <div class="quiz-controls">
-                <input type="button" value="Home" class="button" onclick="newGame()">
+                <a href="index.html">
+                    <input type="button" value="Restart Quiz" class="button">
+                </a>
             </div>
 
         </div>
