@@ -126,12 +126,9 @@ function startQuiz() {
 
 function checkAnswer(answer) {
   if (answer == questions[currentQuestion].correct) {
-
     alert("Correct, Well Done!");
     increaseScore();
     score++
-
-
 
   } else {
     alert("Incorrect, Hard Luck!");
