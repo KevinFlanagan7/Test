@@ -1,4 +1,3 @@
-
 //Puts cursor into name-input box
 document.getElementById("name").focus();
 
@@ -156,17 +155,19 @@ function increaseIncorrect() {
 function showResult() {
   quizContainerElement.classList.add('hide');
   result.classList.remove('hide');
+  document.getElementById("username-result").innerHTML = player.value;
   const scorePercent = Math.round(100 * score / questions.length);
   if (scorePercent >= 80) {
-    document.getElementById("result-message").innerText = `Congratulations, you got ${scorePercent}%, you are a Masters champion!`;
+    document.getElementById("result-message").innerText = `congratulations, you got ${scorePercent}%, you are a Masters champion!`;
   } else if (scorePercent >= 60) {
-    document.getElementById("result-message").innerText = `Well done, you got ${scorePercent}%, you made the cut!`;
+    document.getElementById("result-message").innerText = `well done, you got ${scorePercent}%, you made the cut!`;
   } else if (scorePercent >= 40) {
-    document.getElementById("result-message").innerText = `Hard luck, you got ${scorePercent}%, you didn't make the cut!`;
+    document.getElementById("result-message").innerText = `hard luck, you got ${scorePercent}%, you didn't make the cut!`;
   } else if (scorePercent >= 0) {
-    document.getElementById("result-message").innerText = `Unfortunatley, you only got ${scorePercent}%, they didn't really suit you!`;
+    document.getElementById("result-message").innerText = `unfortunatley, you only got ${scorePercent}%, they didn't really suit you!`;
   }
 }
+
 
 
 

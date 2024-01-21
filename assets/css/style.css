@@ -1,3 +1,4 @@
+
 /* Google fonts import */
 @import url('https://fonts.googleapis.com/css2?family=Merienda:wght@300;400;700&display=swap');
 
@@ -59,7 +60,7 @@ body {
     text-align: left;
     margin-left: 4.5rem;
     padding: 0.5rem;
-    font-size: 1.7rem;
+    font-size: 1.75rem;
 }
 
 #name-box {
@@ -77,11 +78,15 @@ body {
 
 #start-quiz {
     margin-top: 4rem;
-
 }
 
 .start-btn {
     margin-bottom: 3rem;
+}
+
+#welcome {
+    margin-top: 1rem;
+    font-size: 2rem;
 }
 
 #question-counter {
@@ -114,15 +119,12 @@ body {
 }
 
 #result-container {
-    margin: 10rem 0;
-}
-
-#result-message {
-    font-size: 2.5rem;
+    margin: 5rem 0;
+    font-size: 3rem;
 }
 
 #restart-quiz {
-    margin-top: 10rem;
+    margin-top: 5rem;
 }
 
 /* Media query: large or landscape phones (576px and up) Masonary view */
@@ -224,6 +226,5 @@ body {
         font-size: 2rem;
     }
 }
-
 
 
