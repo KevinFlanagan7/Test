@@ -1,6 +1,6 @@
-![Logo](/assets/images/masters-logo.png)
+![Logo](documentation/logo.png)
 
-# Masters Quiz
+# Midland Golf Classic
 
 ## Goal for this Project
 
@@ -10,7 +10,7 @@ Welcome to the Midlands Golf Classic website. This site's goal is to promote the
 
 ## Table of Contents
 
-- [Masters Quiz](#masters-quiz)
+- [Midland Golf Classic](#midland-golf-classic)
 - [Goal for this Project](#goal-for-this-project)
 - [Table of Contents](#table-of-contents)
 - [UX](#ux)

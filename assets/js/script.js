@@ -1,19 +1,32 @@
 //Puts cursor into name-input box
-document.getElementById("name").focus();
+document.querySelector("#name").focus();
 
-let start = document.getElementById('startquiz');
-let instructions = document.getElementById('instructions');
-let quizContainerElement = document.getElementById('quiz-container');
-let questionElement = document.getElementById('quiz-question');
-let optionsElement = document.getElementById('options');
-let nextButton = document.getElementById('next');
-let optionsAreaElement = document.getElementById('options-area');
-let player = document.getElementById('name');
-let result = document.getElementById("result-container");
-let choiceA = document.getElementById("a");
-let choiceB = document.getElementById("b");
-let choiceC = document.getElementById("c");
-let choiceD = document.getElementById("d");
+const start = document.querySelector('#startquiz');
+const instructions = document.querySelector('#instructions');
+const quizContainerElement = document.querySelector('#quiz-container');
+const questionElement = document.querySelector('#quiz-question');
+const optionsElement = document.querySelector('#options');
+const nextButton = document.querySelector('#next');
+const optionsAreaElement = document.querySelector('#options-area');
+const player = document.querySelector("#name");
+const result = document.querySelector("#result-container");
+
+const playerName = document.querySelector("#username");
+
+const currentQuestionNumber = document.querySelector("#current-question");
+
+const correctScore = document.querySelector("#score");
+const incorrectScore = document.querySelector("#incorrect")
+const username = document.querySelector("#username-result");
+const resultMessage = document.querySelector("#result-message");
+
+
+const choiceA = document.querySelector("#a");
+const choiceB = document.querySelector("#b");
+const choiceC = document.querySelector("#c");
+const choiceD = document.querySelector("#d");
+
+
 
 // Array of Quiz Questions
 let questions = [
@@ -88,21 +101,38 @@ let questions = [
     choiceD: "D: Fred Couples",
     correct: "D"
   }
-]
+];
+
+/*fetch("assets/js/questions.json")
+.then(res => {
+  return res.json();
+})
+.then(loadedQuestion => {
+  questions = loadedQuestion;
+
+})*/
+
+
+ 
 
 const lastQuestion = questions.length - 1;
 let currentQuestion = 0;
 let count = 0;
 let score = 0;
 
+
+
+
+
 function showQuestion() {
-  let q = questions[currentQuestion];
-  questionElement.innerText = q.question;
-  choiceA.innerText = q.choiceA;
-  choiceB.innerText = q.choiceB;
-  choiceC.innerText = q.choiceC;
-  choiceD.innerText = q.choiceD;
+  questionElement.innerHTML = questions[currentQuestion].question;
+  choiceA.innerHTML = questions[currentQuestion].choiceA;
+  choiceB.innerHTML = questions[currentQuestion].choiceB;
+  choiceC.innerHTML = questions[currentQuestion].choiceC;
+  choiceD.innerHTML = questions[currentQuestion].choiceD;
 }
+
+
 
 start.addEventListener("click", startQuiz);
 
@@ -112,7 +142,7 @@ function startQuiz() {
   } else {
     instructions.classList.add('hide');
     quizContainerElement.classList.remove('hide');
-    document.getElementById("username").innerHTML = player.value;
+    playerName.innerHTML = player.value;
     showQuestion();
   }
 }
@@ -136,35 +166,37 @@ function checkAnswer(answer) {
 }
 
 function questionCounter() {
-  const currentQuestionNumber = document.getElementById('current-question');
-  currentQuestionNumber.innerText = currentQuestion + 1;
+  currentQuestionNumber.innerHTML = currentQuestion + 1;
 }
 
 /*Functions to increase scores*/
 
 function increaseScore() {
-  let oldScore = parseInt(document.getElementById("score").innerText);
-  document.getElementById("score").innerText = ++oldScore;
+  let oldScore = parseInt(correctScore.innerHTML);
+  correctScore.innerHTML = ++oldScore;
 }
 
 function increaseIncorrect() {
-  let oldScore = parseInt(document.getElementById("incorrect").innerText);
-  document.getElementById("incorrect").innerText = ++oldScore;
+  let oldScore = parseInt(incorrectScore.innerHTML);
+  incorrectScore.innerHTML = ++oldScore;
 }
+
+
+
 
 function showResult() {
   quizContainerElement.classList.add('hide');
   result.classList.remove('hide');
-  document.getElementById("username-result").innerHTML = player.value;
+  username.innerHTML = player.value;
   const scorePercent = Math.round(100 * score / questions.length);
   if (scorePercent >= 80) {
-    document.getElementById("result-message").innerText = `Congratulations, you got ${scorePercent}%, you are a Masters champion!`;
+    resultMessage.innerHTML = `Congratulations, you got ${scorePercent}%, you are a Masters champion!`;
   } else if (scorePercent >= 60) {
-    document.getElementById("result-message").innerText = `Well done, you got ${scorePercent}%, you made the cut!`;
+    resultMessage.innerHTML = `Well done, you got ${scorePercent}%, you made the cut!`;
   } else if (scorePercent >= 40) {
-    document.getElementById("result-message").innerText = `Hard luck, you got ${scorePercent}%, you didn't make the cut!`;
+    resultMessage.innerHTML = `Hard luck, you got ${scorePercent}%, you didn't make the cut!`;
   } else if (scorePercent >= 0) {
-    document.getElementById("result-message").innerText = `Unfortunatley, you only got ${scorePercent}%, they didn't really suit you!`;
+    resultMessage.innerHTML = `Unfortunatley, you only got ${scorePercent}%, they didn't really suit you!`;
   }
 }
 
