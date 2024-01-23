@@ -92,7 +92,7 @@ body {
     margin: 0.5rem 0;
 }
 
-.button {
+.restart-btn {
     height: 3rem;
     width: 20rem;
     font-size: 1.8rem;
@@ -106,6 +106,17 @@ body {
     border: 1px solid var(--dark-black);
     background-color: lightgray;
 }
+
+.nextquestion-btn {
+    height: 3rem;
+    width: 15rem;
+    font-size: 1.6rem;
+    color: var(--dark-black);
+    border-radius: 1rem;
+    background-color: pink;
+
+}
+
 
 .hide {
     display: none;

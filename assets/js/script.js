@@ -6,7 +6,8 @@ const instructions = document.querySelector('#instructions');
 const quizContainerElement = document.querySelector('#quiz-container');
 const questionElement = document.querySelector('#quiz-question');
 const optionsElement = document.querySelector('#options');
-const nextButton = document.querySelector('#next');
+const nextButton = document.querySelector('#next-btn');
+const resultsButton = document.querySelector('#results-btn');
 const optionsAreaElement = document.querySelector('#options-area');
 const player = document.querySelector("#name");
 const result = document.querySelector("#result-container");
@@ -20,118 +21,8 @@ const incorrectScore = document.querySelector("#incorrect")
 const username = document.querySelector("#username-result");
 const resultMessage = document.querySelector("#result-message");
 
-
-const choiceA = document.querySelector("#a");
-const choiceB = document.querySelector("#b");
-const choiceC = document.querySelector("#c");
-const choiceD = document.querySelector("#d");
-
-
-
-// Array of Quiz Questions
-let questions = [
-  {
-    question: "Tiger Woods memorably won by 12 shots in 1997. Who came second?",
-    choiceA: "A: Tom Weiskopt",
-    choiceB: "B: Tom Kite",
-    choiceC: "C: Chris DiMarco",
-    choiceD: "D: Tom Watson",
-    correct: "A"
-  }, {
-    question: "Jack Nicklaus won his sixth and final green jacket in 1986. What age was he?",
-    choiceA: "A: 47",
-    choiceB: "B: 46",
-    choiceC: "C: 45",
-    choiceD: "D: 48",
-    correct: "B"
-  }, {
-    question: "Rory McIlroy imploded on Sunday after holding a four-stoke lead overnight in 2011. Who ended up winning?",
-    choiceA: "A: Adam Scott",
-    choiceB: "B: Lee Westwood",
-    choiceC: "C: Charl Schartzel",
-    choiceD: "D: Louis Oosthuizen",
-    correct: "C"
-  }, {
-    question: "Tiger Woods won in 2005 after a dramatic play-off. Who did he beat?",
-    choiceA: "A: Scott Verplank",
-    choiceB: "B: Chad Campbell",
-    choiceC: "C: Chris DiMarco",
-    choiceD: "D: Ian Poulter",
-    correct: "C"
-  }, {
-    question: "Jordan Spieth fell victim to the dreaded 12th in 2016. What score did he have on the par-3?",
-    choiceA: "A: 8",
-    choiceB: "B: 6",
-    choiceC: "C: 7",
-    choiceD: "D: 9",
-    correct: "C"
-  }, {
-    question: "Who is the youngest player to make the cut at Augusta?",
-    choiceA: "A: Matteo Manassero",
-    choiceB: "B: Ryo Ishikawa",
-    choiceC: "C: Guan Tianlang",
-    choiceD: "D: Rory Mcllroy",
-    correct: "C"
-  }, {
-    question: "Who was the first player to shoot 63 at the Masters?",
-    choiceA: "A: Jack Nicklaus",
-    choiceB: "B: Nick Price",
-    choiceC: "C: Ernie Els",
-    choiceD: "D: Rory Mcllroy",
-    correct: "B"
-  }, {
-    question: "When did Seve Ballesteros win his first Masters?",
-    choiceA: "A: 1978",
-    choiceB: "B: 1980",
-    choiceC: "C: 1979",
-    choiceD: "D: 1981",
-    correct: "B"
-  }, {
-    question: "Larry Mize famously won in 1987 after a three-man play-off. Along with Seve who was the third member?",
-    choiceA: "A: Ben Crenshaw",
-    choiceB: "B: Greg Norman",
-    choiceC: "C: Bernhard Langer",
-    choiceD: "D: Sandy Lyle",
-    correct: "B"
-  }, {
-    question: "Who does Gary Player share the record with for consecutive cuts made at the Masters?",
-    choiceA: "A: Nick Faldo",
-    choiceB: "B: Rikki Rockett",
-    choiceC: "C: Ian Woosnam",
-    choiceD: "D: Fred Couples",
-    correct: "D"
-  }
-];
-
-/*fetch("assets/js/questions.json")
-.then(res => {
-  return res.json();
-})
-.then(loadedQuestion => {
-  questions = loadedQuestion;
-
-})*/
-
-
- 
-
-const lastQuestion = questions.length - 1;
-let currentQuestion = 0;
-let count = 0;
+let shuffledQuestions, currentQuestionIndex;
 let score = 0;
-
-
-
-
-
-function showQuestion() {
-  questionElement.innerHTML = questions[currentQuestion].question;
-  choiceA.innerHTML = questions[currentQuestion].choiceA;
-  choiceB.innerHTML = questions[currentQuestion].choiceB;
-  choiceC.innerHTML = questions[currentQuestion].choiceC;
-  choiceD.innerHTML = questions[currentQuestion].choiceD;
-}
-
 
 
 start.addEventListener("click", startQuiz);
@@ -143,32 +34,74 @@ function startQuiz() {
     instructions.classList.add('hide');
     quizContainerElement.classList.remove('hide');
     playerName.innerHTML = player.value;
-    showQuestion();
+    shuffledQuestions = questions.sort(() => Math.random() - 0.5);
+    currentQuestionIndex = 0;
+    displayQuestion();
   }
 }
 
-function checkAnswer(answer) {
-  if (answer == questions[currentQuestion].correct) {
-    alert("Correct, Well Done!");
-    increaseScore();
+function displayQuestion() {
+  resetState();
+  showQuestion(shuffledQuestions[currentQuestionIndex]);
+}
+
+function showQuestion(question) {
+  currentQuestionNumber.innerText = currentQuestionIndex + 1;
+
+  questionElement.innerHTML = question.question;
+  question.answers.forEach(answer => {
+    let button = document.createElement('button');
+    button.innerText = answer.text;
+    button.classList.add('option-btn');
+    if (answer.correct) {
+      button.dataset.correct = answer.correct;
+    }
+    button.addEventListener('click', selectAnswer);
+    optionsAreaElement.appendChild(button);
+  });
+}
+
+function resetState() {
+  nextButton.classList.add('hide');
+  while (optionsAreaElement.firstChild) {
+    optionsAreaElement.removeChild(optionsAreaElement.firstChild);
+  }
+}
+
+function selectAnswer(event) {
+  let selectedButton = event.target;
+  let correctOption = selectedButton.dataset.correct === 'true';
+  let allQuestionOptions = optionsAreaElement.children.length;
+  
+  for (let i = 0; i < allQuestionOptions; i++) {
+    let currentButton = optionsAreaElement.children[i];
+    let isCorrect = currentButton.dataset.correct === 'true';
+    
+    if (isCorrect) {
+      currentButton.style.backgroundColor = "green";
+    }
+    currentButton.classList.add('disable');
+  }
+
+  if (correctOption) {
+  
+    selectedButton.style.backgroundColor = "green";
+    increaseScore()
     score++
   } else {
-    alert(`Incorrect, Hard Luck!, the correct answer is ${questions[currentQuestion].correct}.`);
-    increaseIncorrect();
+    selectedButton.style.backgroundColor = "red";
+    selectedButton.classList.add('disable');
+    /*increaseIncorrect()*/
   }
-  if (currentQuestion < lastQuestion) {
-    currentQuestion++;
-    showQuestion();
-    questionCounter();
+
+  if (shuffledQuestions.length > currentQuestionIndex + 1) {
+    nextButton.classList.remove('hide');
   } else {
-    showResult();
+    resultsButton.classList.remove('hide');
   }
 }
 
-function questionCounter() {
-  currentQuestionNumber.innerHTML = currentQuestion + 1;
-}
-
+ 
 /*Functions to increase scores*/
 
 function increaseScore() {
@@ -176,15 +109,19 @@ function increaseScore() {
   correctScore.innerHTML = ++oldScore;
 }
 
-function increaseIncorrect() {
+/*function increaseIncorrect() {
   let oldScore = parseInt(incorrectScore.innerHTML);
   incorrectScore.innerHTML = ++oldScore;
-}
+}*/
+
+/*function for next button*/
+nextButton.addEventListener('click', () => {
+  currentQuestionIndex++;
+  displayQuestion();
+});
 
 
-
-
-function showResult() {
+resultsButton.addEventListener('click', () => {
   quizContainerElement.classList.add('hide');
   result.classList.remove('hide');
   username.innerHTML = player.value;
@@ -198,25 +135,108 @@ function showResult() {
   } else if (scorePercent >= 0) {
     resultMessage.innerHTML = `Unfortunatley, you only got ${scorePercent}%, they didn't really suit you!`;
   }
-}
+}); 
+
+const questions = [
+  {
+    question: 'Tiger Woods memorably won by 12 shots in 1997. Who came second?',
+    answers: [
+      { text: 'Tom Weiskopt', correct: true },
+      { text: 'Chris DiMarco', correct: false },
+      { text: 'Tom Kite', correct: false },
+      { text: 'Tom Watson', correct: false }
+    ]
+  },
+  {
+    question: 'Jack Nicklaus won his sixth and final green jacket in 1986. What age was he?',
+    answers: [
+      { text: '47', correct: false },
+      { text: '46', correct: true },
+      { text: '45', correct: false },
+      { text: '48', correct: false }
+    ]
+  },
+  {
+    question: 'Rory McIlroy imploded on Sunday after holding a four-stoke lead overnight in 2011. Who ended up winning?',
+    answers: [
+      { text: 'Adam Scott', correct: false },
+      { text: 'Lee Westwood', correct: false },
+      { text: 'Charl Schartzel', correct: true },
+      { text: 'Louis Oosthuizen', correct: false }
+    ]
+  },
+  {
+    question: 'Tiger Woods won in 2005 after a dramatic play-off. Who did he beat?',
+    answers: [
+      { text: 'Scott Verplan', correct: false },
+      { text: 'Chad Campbell', correct: false },
+      { text: 'Chris DiMarco', correct: true },
+      { text: 'Ian Poulter', correct: false }
+    ]
+  },
+  {
+    question: 'Jordan Spieth fell victim to the dreaded 12th in 2016. What score did he have on the par-3?',
+    answers: [
+      { text: '6', correct: false },
+      { text: '7', correct: true },
+      { text: '9', correct: false },
+      { text: '8', correct: false }
+    ]
+  },
+  {
+    question: 'Who is the youngest player to make the cut at Augusta?',
+    answers: [
+      { text: 'Matteo Manassero', correct: false },
+      { text: 'Ryo Ishikawa', correct: false },
+      { text: 'Guan Tianlang', correct: true },
+      { text: 'Rory Mcllroy', correct: false }
+    ]
+  },
+  {
+    question: 'Who was the first player to shoot 63 at the Masters?',
+    answers: [
+      { text: 'Jack Nicklaus', correct: false },
+      { text: 'Nick Price', correct: true },
+      { text: 'Ernie Els', correct: false },
+      { text: 'Rory Mcllroy', correct: false }
+    ]
+  },
+  {
+    question: 'When did Seve Ballesteros win his first Masters?',
+    answers: [
+      { text: '1978', correct: false },
+      { text: '1980', correct: true },
+      { text: '1979', correct: false },
+      { text: '1981', correct: false }
+    ]
+  },
+  {
+    question: 'Larry Mize famously won in 1987 after a three-man play-off. Along with Seve who was the third member?',
+    answers: [
+      { text: 'Ben Crenshaw', correct: false },
+      { text: 'Greg Norman', correct: true },
+      { text: 'Bernhard Langer', correct: false },
+      { text: 'Sandy Lyle', correct: false }
+    ]
+  },
+  {
+    question: 'Who does Gary Player share the record with for consecutive cuts made at the Masters?',
+    answers: [
+      { text: 'Nick Faldo', correct: false },
+      { text: 'Rikki Rockett', correct: false },
+      { text: 'Ian Woosnam', correct: false },
+      { text: 'Fred Couples', correct: true }
+    ]
+  },
+]
 
 
 
+/*fetch("assets/js/questions.json")
+.then(res => {
+return res.json();
+})
+.then(loadedQuestion => {
+questions = loadedQuestion;
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+*/

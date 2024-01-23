@@ -67,7 +67,7 @@
             </div>
         </div>
 
-        <!-- Container for questions and quiz buttons -->
+        <!-- Container for questions and options -->
         <div id="quiz-container" class="questions-game hide">
 
             <p id="welcome">
@@ -83,29 +83,35 @@
             </div>
 
             <div id="options-area">
-                <button id="a" class="option-btn" onclick="checkAnswer('A')">option A</button>
-                <button id="b" class="option-btn" onclick="checkAnswer('B')">option B</button>
+                <button class="option-btn">option A</button>
+                <button class="option-btn">option B</button>
+                <button class="option-btn">option C</button>
+                <button class="option-btn">option D</button>
             </div>
-            <div id="options-area-1">
-                <button id="c" class="option-btn" onclick="checkAnswer('C')">option C</button>
-                <button id="d" class="option-btn" onclick="checkAnswer('D')">option D</button>
+
+            <div>
+                <button id="next-btn" class="nextquestion-btn hide">
+                    Next Question
+                </button>
+                <button class="next-question-btn hide" id="results-btn">
+                    Show Result!
+                </button>
             </div>
+
 
             <div id="score-area">
                 <p class="scores">
                     Correct Answers: <span id="score">0</span>
                 </p>
-                <p class="scores">
+              <!--  <p class="scores">
                     Incorrect Answers: <span id="incorrect">0</span>
-                </p>
+                </p>-->
             </div>
 
         </div>
 
         <!-- Container with the result -->
-        <div id="result-container" class="results hide">
-
-
+        <div id="result-container" class="result hide">
             <span id="username-result"></span>,
             <p id="result-message">
                 'Placeholder'
@@ -113,7 +119,7 @@
 
             <div id="restart-quiz">
                 <a href="index.html">
-                    <input type="button" value="Restart Quiz" class="button">
+                    <input type="button" value="Restart Quiz" class="restart-btn">
                 </a>
             </div>
         </div>
