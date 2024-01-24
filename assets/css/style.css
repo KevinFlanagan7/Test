@@ -50,7 +50,7 @@ body {
     width: 80%;
     height: 48rem;
     top: 12rem;
-    background-color: rgba(110, 144, 117, 0.8);
+    background-color: rgba(110, 144, 117, 0.9);
     text-align: center;
     border-radius: 3rem;  
 }
@@ -66,13 +66,14 @@ body {
     margin-top: 4rem;   
 }
 
-.name-input, .btn, .option-btn {
+.name-input, .btn, .option-btn, .restart-btn {
     height: 3rem;
     width: 20rem;
     font-size: 1.8rem;
     color: var(--dark-black);
     border-radius: 1rem;
     background-color: var(--white);
+    border: 1px solid var(--dark-black);
 }
 
 #start-quiz {
@@ -92,14 +93,8 @@ body {
     margin: 0.5rem 0;
 }
 
-.restart-btn {
-    height: 3rem;
-    width: 20rem;
-    font-size: 1.8rem;
-    color: var(--dark-black);
-    border-radius: 1rem;
-    background-color: var(--white);
-}
+
+
 
 .option-btn {
     margin-bottom: 1rem;
@@ -107,13 +102,14 @@ body {
     background-color: lightgray;
 }
 
-.nextquestion-btn {
+.nextquestion-btn, .results {
     height: 3rem;
     width: 15rem;
-    font-size: 1.6rem;
-    color: var(--dark-black);
+    font-size: 1.7rem;
+    color: var(--white);
     border-radius: 1rem;
-    background-color: pink;
+    background-color: var(--shadow-gray);
+    border: 1px solid var(--dark-black);
 
 }
 
