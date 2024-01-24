@@ -15,6 +15,7 @@ const result = document.querySelector("#result-container");
 const playerName = document.querySelector("#username");
 const currentQuestionNumber = document.querySelector("#current-question");
 const correctScore = document.querySelector("#score");
+const correctSound = document.querySelector("#correct-sound");
 const incorrectScore = document.querySelector("#incorrect")
 const username = document.querySelector("#username-result");
 const resultMessage = document.querySelector("#result-message");
@@ -84,6 +85,7 @@ function selectAnswer(e) {
 
   if (correctOption) {
       selectedButton.style.backgroundColor = "green";
+      correctSound.play();
       increaseScore();
       score++
       
