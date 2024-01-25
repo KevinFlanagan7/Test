@@ -19,6 +19,7 @@ const correctSound = document.querySelector("#correct-sound");
 const incorrectScore = document.querySelector("#incorrect")
 const username = document.querySelector("#username-result");
 const resultMessage = document.querySelector("#result-message");
+const crowdApplause = document.querySelector("#crowd-applause");
 
 /*Declaration of Global variables*/
 let shuffledQuestions, currentQuestionIndex;
@@ -130,6 +131,7 @@ resultsButton.addEventListener('click', () => {
   const scorePercent = Math.round(100 * score / questions.length);
   if (scorePercent >= 80) {
     resultMessage.innerHTML = `Congratulations, you got ${scorePercent}%, you are a Masters champion!`;
+    crowdApplause.play();
   } else if (scorePercent >= 60) {
     resultMessage.innerHTML = `Well done, you got ${scorePercent}%, you made the cut!`;
   } else if (scorePercent >= 40) {
