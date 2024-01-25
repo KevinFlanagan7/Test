@@ -20,6 +20,7 @@ const incorrectScore = document.querySelector("#incorrect")
 const username = document.querySelector("#username-result");
 const resultMessage = document.querySelector("#result-message");
 const crowdApplause = document.querySelector("#crowd-applause");
+const incorrectSound = document.querySelector("#incorrect-sound");
 
 /*Declaration of Global variables*/
 let shuffledQuestions, currentQuestionIndex;
@@ -92,6 +93,7 @@ function selectAnswer(e) {
       
   } else {
       selectedButton.style.backgroundColor = "red";
+      incorrectSound.play();
       
   }
 
