@@ -73,7 +73,7 @@ body {
     color: var(--dark-black);
     border-radius: 1rem;
     background-color: var(--white);
-    border: 1px solid var(--dark-black);
+    border: 2px solid var(--dark-black);
 }
 
 #start-quiz {
