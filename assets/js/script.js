@@ -1,41 +1,38 @@
-/*Puts cursor into name-input box*/
-document.querySelector("#name").focus();
-
 /*Declaration of Global constants*/
-const start = document.querySelector('#startquiz');
-const instructions = document.querySelector('#instructions');
-const quizContainerElement = document.querySelector('#quiz-container');
-const questionElement = document.querySelector('#quiz-question');
-const optionsElement = document.querySelector('#options');
-const nextButton = document.querySelector('#next-btn');
-const resultsButton = document.querySelector('#results-btn');
-const optionsAreaElement = document.querySelector('#options-area');
-const player = document.querySelector("#name");
-const result = document.querySelector("#result-container");
-const playerName = document.querySelector("#username");
-const currentQuestionNumber = document.querySelector("#current-question");
-const correctScore = document.querySelector("#score");
-const correctSound = document.querySelector("#correct-sound");
-const incorrectScore = document.querySelector("#incorrect")
-const username = document.querySelector("#username-result");
-const resultMessage = document.querySelector("#result-message");
-const crowdApplause = document.querySelector("#crowd-applause");
-const incorrectSound = document.querySelector("#incorrect-sound");
+const startQuizRef = document.querySelector('#startquiz');
+const instructionsRef = document.querySelector('#instructions');
+const quizContainerRef = document.querySelector('#quiz-container');
+const quizQuestionRef = document.querySelector('#quiz-question');
+const nextBtnRef = document.querySelector('#next-btn');
+const resultsBtnRef = document.querySelector('#results-btn');
+const optionsAreaRef = document.querySelector('#options-area');
+const nameRef = document.querySelector("#name");
+const resultContainerRef = document.querySelector("#result-container");
+const userNameRef = document.querySelector("#username");
+const currentQuestionRef = document.querySelector("#current-question");
+const scoreRef = document.querySelector("#score");
+const correctSoundRef = document.querySelector("#correct-sound");
+const incorrectSoundRef = document.querySelector("#incorrect-sound");
+const usernameResultRef = document.querySelector("#username-result");
+const resultMessageRef = document.querySelector("#result-message");
+const crowdApplauseRef = document.querySelector("#crowd-applause");
 
 /*Declaration of Global variables*/
-let shuffledQuestions, currentQuestionIndex;
+let shuffledQuestions;
+let currentQuestionIndex;
 let score = 0;
 
 /*Event Listeners to start quiz*/
-start.addEventListener("click", startQuiz);
+startQuizRef.addEventListener("click", startQuiz);
 
 function startQuiz() {
-  if (player.value === '') {
+  
+  if (nameRef.value === '') {
     alert("Please enter name before clicking Start Quiz button");
   } else {
-    instructions.classList.add('hide');
-    quizContainerElement.classList.remove('hide');
-    playerName.innerHTML = player.value;
+    instructionsRef.classList.add('hide');
+    quizContainerRef.classList.remove('hide');
+    userNameRef.innerHTML = nameRef.value;
     shuffledQuestions = questions.sort(() => Math.random() - 0.5);
     currentQuestionIndex = 0;
     displayShuffledQuestion();
@@ -48,35 +45,35 @@ function displayShuffledQuestion() {
 }
 
 function showOptions(question) {
-  currentQuestionNumber.innerText = currentQuestionIndex + 1;
-  questionElement.innerHTML = question.question;
+  currentQuestionRef.innerHTML = currentQuestionIndex + 1;
+  quizQuestionRef.innerHTML = question.question;
   question.answers.forEach(answer => {
-    let button = document.createElement('button');
-    button.innerText = answer.text;
+    const button = document.createElement('button');
+    button.innerHTML = answer.text;
     button.classList.add('option-btn');
     if (answer.correct) {
       button.dataset.correct = answer.correct;
     }
     button.addEventListener('click', selectAnswer);
-    optionsAreaElement.appendChild(button);
+    optionsAreaRef.appendChild(button);
   });
 }
 
 function resetState() {
-  nextButton.classList.add('hide');
-  while (optionsAreaElement.firstChild) {
-    optionsAreaElement.removeChild(optionsAreaElement.firstChild);
+  nextBtnRef.classList.add('hide');
+  while (optionsAreaRef.firstChild) {
+    optionsAreaRef.removeChild(optionsAreaRef.firstChild);
   }
 }
 
 function selectAnswer(event) {
-  let selectedButton = event.target;
-  let correctOption = selectedButton.dataset.correct === 'true';
-  let allOptions = optionsAreaElement.children.length;
+  const selectedButton = event.target;
+  const correctOption = selectedButton.dataset.correct === 'true';
+  const allOptions = optionsAreaRef.children.length;
 
   for (let i = 0; i < allOptions; i++) {
-    let currentButton = optionsAreaElement.children[i];
-    let isCorrect = currentButton.dataset.correct === 'true';
+    const currentButton = optionsAreaRef.children[i];
+    const isCorrect = currentButton.dataset.correct === 'true';
 
     if (isCorrect) {
       currentButton.style.backgroundColor = "green";
@@ -86,48 +83,48 @@ function selectAnswer(event) {
 
   if (correctOption) {
     selectedButton.style.backgroundColor = "green";
-    correctSound.play();
+    correctSoundRef.play();
     increaseScore();
     score++
   } else {
     selectedButton.style.backgroundColor = "red";
-    incorrectSound.play();
+    incorrectSoundRef.play();
   }
 
   if (shuffledQuestions.length > currentQuestionIndex + 1) {
-    nextButton.classList.remove('hide');
+    nextBtnRef.classList.remove('hide');
   } else {
-    resultsButton.classList.remove('hide');
+    resultsBtnRef.classList.remove('hide');
   }
 }
 
 /*Functions to increase scores*/
 function increaseScore() {
-  let oldScore = parseInt(correctScore.innerHTML);
-  correctScore.innerHTML = ++oldScore;
+  let oldScore = parseInt(scoreRef.innerHTML);
+  scoreRef.innerHTML = ++oldScore;
 }
 
 /*Evenet Listenereer for Next button*/
-nextButton.addEventListener('click', () => {
+nextBtnRef.addEventListener('click', () => {
   currentQuestionIndex++;
   displayShuffledQuestion();
 });
 
 /*Evenet Listenereer for Results button*/
-resultsButton.addEventListener('click', () => {
-  quizContainerElement.classList.add('hide');
-  result.classList.remove('hide');
-  username.innerHTML = player.value;
+resultsBtnRef.addEventListener('click', () => {
+  quizContainerRef.classList.add('hide');
+  resultContainerRef.classList.remove('hide');
+  usernameResultRef.innerHTML = nameRef.value;
   const scorePercent = Math.round(100 * score / questions.length);
   if (scorePercent >= 80) {
-    resultMessage.innerHTML = `Congratulations, you got ${scorePercent}%, you are a Masters champion!`;
-    crowdApplause.play();
+    resultMessageRef.innerHTML = `Congratulations, you got ${scorePercent}%, you are a Masters champion!`;
+    crowdApplauseRef.play();
   } else if (scorePercent >= 60) {
-    resultMessage.innerHTML = `Well done, you got ${scorePercent}%, you made the cut!`;
+    resultMessageRef.innerHTML = `Well done, you got ${scorePercent}%, you made the cut!`;
   } else if (scorePercent >= 40) {
-    resultMessage.innerHTML = `Hard luck, you got ${scorePercent}%, you didn't make the cut!`;
+    resultMessageRef.innerHTML = `Hard luck, you got ${scorePercent}%, you didn't make the cut!`;
   } else if (scorePercent >= 0) {
-    resultMessage.innerHTML = `Unfortunatley, you only got ${scorePercent}%, they didn't really suit you!`;
+    resultMessageRef.innerHTML = `Unfortunatley, you only got ${scorePercent}%, they didn't really suit you!`;
   }
 });
 
@@ -141,4 +138,10 @@ fetch("assets/js/questions.json")
   .then(loadedQuestions => {
     questions = loadedQuestions;
   });
+
+/*Puts cursor into name-input box*/
+addEventListener("DOMContentLoaded", () => {
+  nameRef.focus();
+  });
+
 
