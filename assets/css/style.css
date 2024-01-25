@@ -17,7 +17,7 @@
 
 /* With Font size of 62.5%, 1rem equals 10px */
 html {
-    font-size: 62.5%;    
+    font-size: 62.5%;
 }
 
 body {
@@ -29,7 +29,6 @@ body {
     color: var(--dark-black);
     background: url("../images/Augusta.webp") no-repeat center center/cover;
     align-items: center;
-    
 }
 
 #heading {
@@ -39,23 +38,24 @@ body {
     background-color: rgba(110, 144, 117, 0.8);
 }
 
-#logo {    
+#logo {
     height: 6rem;
     margin-top: 1rem;
-    border-radius: 2rem;     
+    border-radius: 2rem;
 }
 
 #quiz-area {
     position: absolute;
     width: 80%;
-    height: 48rem;
+    height: 50rem;
     top: 12rem;
     background-color: rgba(110, 144, 117, 0.9);
     text-align: center;
-    border-radius: 3rem;  
+    border-radius: 3rem;
 }
 
-#instructions-list {   
+/*Instruction section*/
+#instructions-list {
     text-align: left;
     margin-left: 4.5rem;
     padding: 0.5rem;
@@ -63,27 +63,23 @@ body {
 }
 
 #name-box {
-    margin-top: 4rem;   
+    margin: 2.5rem 0;
 }
 
-.name-input, .btn, .option-btn, .restart-btn {
+.name-input,
+.btn,
+.option-btn,
+.restart-btn {
     height: 3rem;
     width: 20rem;
     font-size: 1.8rem;
     color: var(--dark-black);
     border-radius: 1rem;
-    background-color: var(--white);
+    background-color: lightgray;
     border: 2px solid var(--dark-black);
 }
 
-#start-quiz {
-    margin-top: 4rem;
-}
-
-.start-btn {
-    margin-bottom: 3rem;
-}
-
+/*Quiz container section*/
 #welcome {
     margin-top: 1rem;
     font-size: 2rem;
@@ -93,37 +89,31 @@ body {
     margin: 0.5rem 0;
 }
 
-
-
-
-.option-btn {
-    margin-bottom: 1rem;
-    border: 1px solid var(--dark-black);
-    background-color: lightgray;
-}
-
-.nextquestion-btn, .results {
-    height: 3rem;
-    width: 15rem;
-    font-size: 1.7rem;
-    color: var(--white);
-    border-radius: 1rem;
-    background-color: var(--shadow-gray);
-    border: 1px solid var(--dark-black);
-
-}
-
-
-.hide {
-    display: none;
-}
-
 #quiz-question {
     margin: 1rem 0;
     font-size: 2rem;
     padding: 0.5rem;
 }
 
+.option-btn {
+    margin-bottom: 1.5rem;
+    border: 2px solid var(--dark-black);
+    background-color: lightgray;
+}
+
+.nextquestion-btn,
+.results {
+    height: 3rem;
+    width: 15rem;
+    font-size: 1.7rem;
+    color: var(--white);
+    border-radius: 1rem;
+    background-color: var(--shadow-gray);
+    border: 2px solid var(--dark-black);
+    margin-bottom: 1rem;
+}
+
+/*Results container section*/
 #result-container {
     margin: 5rem 0;
     font-size: 3rem;
@@ -133,10 +123,25 @@ body {
     margin-top: 5rem;
 }
 
+.hide {
+    display: none;
+}
+
 /* Media query: large or landscape phones (576px and up) Masonary view */
 @media screen and (min-width: 576px) {
+
     body {
         background: url("../images/Augusta.webp") repeat center center/cover;
+    }
+
+    #quiz-question {
+        margin: 2rem 0;
+
+    }
+
+    .option-btn {
+        margin: 2rem;
+
     }
 }
 
@@ -147,90 +152,102 @@ body {
         font-size: 3rem;
     }
 
-    #quiz-area {
-        top: 12rem; 
-    }
-
-    #instructions-list {   
+    /*Instruction section*/
+    #instructions-list {
         text-align: left;
-        margin-left: 14rem; 
+        margin-left: 14rem;
         font-size: 2rem;
     }
 
     #name-box {
-        margin-top: 5rem;
+        margin-top: 4rem;
     }
 
-    .heading-h2 {
-        font-size: 3rem;
-    }
-
-    .name-input, .btn {
+    .name-input,
+    .btn {
         height: 3.5rem;
         width: 25rem;
         font-size: 2rem;
         border-radius: 1rem;
     }
 
-    .btn {
-        margin-top: 2rem;
+    /*Quiz container section*/
+    #quiz-area {
+        top: 12rem;
+        height: 48rem;
     }
 
     #quiz-question {
         margin: 3rem 0;
         font-size: 2.5rem;
-        padding: 0.5rem;
     }
 
     #options-area {
-        margin: 4rem 0;
+        margin: 3rem 0;
     }
-
-    #a, #c{
-        margin-right: 6rem;
-    }
-
     #score-area {
-        margin-top: 4rem;
         font-size: 1.8rem;
     }
-    
+
+    .nextquestion-btn {
+        margin-bottom: 3rem;
+    }
+
+    .heading-h2 {
+        font-size: 3rem;
+    }
+
+    /*Results container section*/
     #result-container {
         margin: 10rem 0;
     }
-    
+
     #result-message {
         font-size: 2.5rem;
     }
-    
+
     #restart-quiz {
         margin-top: 10rem;
-    }   
+    }
+
+    /*Results container section*/
+    #result-container {
+        margin: 10rem 0;
+        font-size: 3rem;
+    }
+
+    #restart-quiz {
+        margin-top: 8rem;
+    }
 }
 
 /* Large devices (laptops and desktops, 992px and up) */
 @media screen and (min-width: 992px) {
 
-    #quiz-area {
-        width: 70%;
+    #instructions-list {
+        margin-left: 15rem;
     }
 
-    #instructions-list {   
-        margin-left: 12rem;      
+    #quiz-area {
+        width: 70%;
+        height: 48rem;
     }
 }
 
 /* Large devices (Desktops, 1200px and up) */
 @media screen and (min-width: 1200px) {
 
-    #quiz-area {
-        width: 60%;       
-    }
-
-    #instructions-list {   
-        margin-left: 12rem; 
+    #instructions-list {
         font-size: 2rem;
     }
+
+    #name-box {
+        margin-top: 6rem;
+        margin-bottom: 4rem;
+    }
+
+    #quiz-area {
+        width: 60%;
+        height: 48rem;
+    }
 }
-
-

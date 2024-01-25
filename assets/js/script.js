@@ -1,4 +1,4 @@
-//Puts cursor into name-input box
+/*Puts cursor into name-input box*/
 document.querySelector("#name").focus();
 
 /*Declaration of Global constants*/
@@ -26,7 +26,7 @@ const incorrectSound = document.querySelector("#incorrect-sound");
 let shuffledQuestions, currentQuestionIndex;
 let score = 0;
 
-/*Event Listener for Start Quiz button*/
+/*Event Listeners to start quiz*/
 start.addEventListener("click", startQuiz);
 
 function startQuiz() {
@@ -38,16 +38,16 @@ function startQuiz() {
     playerName.innerHTML = player.value;
     shuffledQuestions = questions.sort(() => Math.random() - 0.5);
     currentQuestionIndex = 0;
-    displayQuestion();
+    displayShuffledQuestion();
   }
 }
 
-function displayQuestion() {
+function displayShuffledQuestion() {
   resetState();
-  showQuestion(shuffledQuestions[currentQuestionIndex]);
+  showOptions(shuffledQuestions[currentQuestionIndex]);
 }
 
-function showQuestion(question) {
+function showOptions(question) {
   currentQuestionNumber.innerText = currentQuestionIndex + 1;
   questionElement.innerHTML = question.question;
   question.answers.forEach(answer => {
@@ -69,63 +69,51 @@ function resetState() {
   }
 }
 
-function selectAnswer(e) {
-  let selectedButton = e.target;
+function selectAnswer(event) {
+  let selectedButton = event.target;
   let correctOption = selectedButton.dataset.correct === 'true';
   let allOptions = optionsAreaElement.children.length;
 
   for (let i = 0; i < allOptions; i++) {
-      let currentButton = optionsAreaElement.children[i];
-      let isCorrect = currentButton.dataset.correct === 'true';
+    let currentButton = optionsAreaElement.children[i];
+    let isCorrect = currentButton.dataset.correct === 'true';
 
-      if (isCorrect) {
-          currentButton.style.backgroundColor = "green";
-          
-      }
-      currentButton.disabled= true;
+    if (isCorrect) {
+      currentButton.style.backgroundColor = "green";
+    }
+    currentButton.disabled = true;
   }
 
   if (correctOption) {
-      selectedButton.style.backgroundColor = "green";
-      correctSound.play();
-      increaseScore();
-      score++
-      
+    selectedButton.style.backgroundColor = "green";
+    correctSound.play();
+    increaseScore();
+    score++
   } else {
-      selectedButton.style.backgroundColor = "red";
-      incorrectSound.play();
-      
+    selectedButton.style.backgroundColor = "red";
+    incorrectSound.play();
   }
 
   if (shuffledQuestions.length > currentQuestionIndex + 1) {
-      nextButton.classList.remove('hide');
+    nextButton.classList.remove('hide');
   } else {
-      resultsButton.classList.remove('hide');
+    resultsButton.classList.remove('hide');
   }
 }
 
 /*Functions to increase scores*/
-
 function increaseScore() {
   let oldScore = parseInt(correctScore.innerHTML);
   correctScore.innerHTML = ++oldScore;
 }
 
-
-/*function increaseIncorrect() {
-  let oldScore = parseInt(incorrectScore.innerHTML);
-  incorrectScore.innerHTML = ++oldScore;
-}*/
-
 /*Evenet Listenereer for Next button*/
-
 nextButton.addEventListener('click', () => {
   currentQuestionIndex++;
-  displayQuestion();
+  displayShuffledQuestion();
 });
 
 /*Evenet Listenereer for Results button*/
-
 resultsButton.addEventListener('click', () => {
   quizContainerElement.classList.add('hide');
   result.classList.remove('hide');
@@ -144,7 +132,6 @@ resultsButton.addEventListener('click', () => {
 });
 
 /*Fetch API (Application Programming Interface) to get Quiz questions from local json file*/
-
 let questions = [];
 
 fetch("assets/js/questions.json")
@@ -154,98 +141,4 @@ fetch("assets/js/questions.json")
   .then(loadedQuestions => {
     questions = loadedQuestions;
   });
-
-/* {
-   question: 'Tiger Woods memorably won by 12 shots in 1997. Who came second?',
-   answers: [
-     { text: 'Tom Weiskopt', correct: true },
-     { text: 'Chris DiMarco', correct: false },
-     { text: 'Tom Kite', correct: false },
-     { text: 'Tom Watson', correct: false }
-   ]
- },
- {
-   question: 'Jack Nicklaus won his sixth and final green jacket in 1986. What age was he?',
-   answers: [
-     { text: '47', correct: false },
-     { text: '46', correct: true },
-     { text: '45', correct: false },
-     { text: '48', correct: false }
-   ]
- },
- {
-   question: 'Rory McIlroy imploded on Sunday after holding a four-stoke lead overnight in 2011. Who ended up winning?',
-   answers: [
-     { text: 'Adam Scott', correct: false },
-     { text: 'Lee Westwood', correct: false },
-     { text: 'Charl Schartzel', correct: true },
-     { text: 'Louis Oosthuizen', correct: false }
-   ]
- },
- {
-   question: 'Tiger Woods won in 2005 after a dramatic play-off. Who did he beat?',
-   answers: [
-     { text: 'Scott Verplan', correct: false },
-     { text: 'Chad Campbell', correct: false },
-     { text: 'Chris DiMarco', correct: true },
-     { text: 'Ian Poulter', correct: false }
-   ]
- },
- {
-   question: 'Jordan Spieth fell victim to the dreaded 12th in 2016. What score did he have on the par-3?',
-   answers: [
-     { text: '6', correct: false },
-     { text: '7', correct: true },
-     { text: '9', correct: false },
-     { text: '8', correct: false }
-   ]
- },
- {
-   question: 'Who is the youngest player to make the cut at Augusta?',
-   answers: [
-     { text: 'Matteo Manassero', correct: false },
-     { text: 'Ryo Ishikawa', correct: false },
-     { text: 'Guan Tianlang', correct: true },
-     { text: 'Rory Mcllroy', correct: false }
-   ]
- },
- {
-   question: 'Who was the first player to shoot 63 at the Masters?',
-   answers: [
-     { text: 'Jack Nicklaus', correct: false },
-     { text: 'Nick Price', correct: true },
-     { text: 'Ernie Els', correct: false },
-     { text: 'Rory Mcllroy', correct: false }
-   ]
- },
- {
-   question: 'When did Seve Ballesteros win his first Masters?',
-   answers: [
-     { text: '1978', correct: false },
-     { text: '1980', correct: true },
-     { text: '1979', correct: false },
-     { text: '1981', correct: false }
-   ]
- },
- {
-   question: 'Larry Mize famously won in 1987 after a three-man play-off. Along with Seve who was the third member?',
-   answers: [
-     { text: 'Ben Crenshaw', correct: false },
-     { text: 'Greg Norman', correct: true },
-     { text: 'Bernhard Langer', correct: false },
-     { text: 'Sandy Lyle', correct: false }
-   ]
- },
- {
-   question: 'Who does Gary Player share the record with for consecutive cuts made at the Masters?',
-   answers: [
-     { text: 'Nick Faldo', correct: false },
-     { text: 'Rikki Rockett', correct: false },
-     { text: 'Ian Woosnam', correct: false },
-     { text: 'Fred Couples', correct: true }
-   ]
- },
-]*/
-
-
 
