@@ -16,11 +16,13 @@ const incorrectSoundRef = document.querySelector("#incorrect-sound");
 const usernameResultRef = document.querySelector("#username-result");
 const resultMessageRef = document.querySelector("#result-message");
 const crowdApplauseRef = document.querySelector("#crowd-applause");
+const muteBtnRef = document.querySelector("#muteBtn");
 
 /*Declaration of Global variables*/
 let shuffledQuestions;
 let currentQuestionIndex;
 let score = 0;
+let isMuted = false;
 
 /*Event Listeners to start quiz*/
 startQuizRef.addEventListener("click", startQuiz);
@@ -126,6 +128,23 @@ resultsBtnRef.addEventListener('click', () => {
   } else if (scorePercent >= 0) {
     resultMessageRef.innerHTML = `Unfortunatley, you only got ${scorePercent}%, they didn't really suit you!`;
   }
+});
+
+muteBtnRef.addEventListener("click", () => {
+  if (isMuted) {
+      correctSoundRef.muted = false;
+      incorrectSoundRef.muted = false;
+      crowdApplauseRef.muted = false;
+      muteBtnRef.innerHTML = '<i class="fas fa-volume-up"></i>';
+  } else {
+      correctSoundRef.muted = true;
+      incorrectSoundRef.muted = true;
+      crowdApplauseRef.muted = true;
+      muteBtnRef.innerHTML = '<i class="fa-solid fa-volume-xmark"></i>';
+  }
+
+  // Toggle when pressed
+  isMuted = !isMuted;
 });
 
 /*Fetch API (Application Programming Interface) to get Quiz questions from local json file*/
