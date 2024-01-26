@@ -74,6 +74,8 @@ body {
     border: 1px solid var(--dark-black);
     border-radius: 2rem;
     font-size: 1.8rem;
+    cursor: pointer;
+    outline: none;
 }
 
 .name-input,
@@ -87,6 +89,8 @@ body {
     border-radius: 1rem;
     background-color: lightgray;
     border: 2px solid var(--dark-black);
+    cursor: pointer;
+    outline: none;
 }
 
 /*Quiz container section*/
